@@ -1,11 +1,29 @@
 {
   "name": "vue-canvas-poster",
   "version": "0.1.0",
-  "private": true,
+  "description": "A lightweight vue components use canvas draw image by css properties.(一个通过css属性画canvas图片的轻量级的vue组件)",
+  "author": "Sunnie <s406803045@163.com>",
+  "license": "MIT",
+  "main": "./dist/vue-canvas-poster.umd.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunnie1992/vue_canvas_poster"
+  },
+  "bugs": {
+    "url": "https://github.com/sunnie1992/vue_canvas_poster/issues"
+  },
+  "homepage": "https://github.com/sunnie1992/vue_canvas_poster#readme",
+  "keywords": [
+    "canvas",
+    "poster",
+    "wechat"
+  ],
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name vue-canvas-poster ./src/lib/index.js"
   },
   "dependencies": {
     "core-js": "^2.6.5",
