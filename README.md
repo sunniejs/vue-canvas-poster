@@ -1,29 +1,129 @@
 # vue-canvas-poster
 
-## Project setup
+vue 组件-简单属性画 Canvas 图
+<a href="https://www.npmjs.com/package/vue-canvas-poster">
+<img src="https://img.shields.io/npm/v/vue-canvas-poster.svg?style=flat" alt="npm"></a>
+
+## 概述
+
+一个通过 css 属性画 canvas 图片的轻量级的 vue 组件
+(A lightweight vue components use canvas draw image by css properties.)
+
+## 生成效果
+
+开发中。。。
+
+<!-- <img width="300" src="https://github.com/jasondu/wxa-plugin-canvas/blob/master/demo.png"></img> -->
+
+## 组件原理说明文章
+
+开发中。。。
+
+## 安装
+
+#### 通过 npm 安装
+
 ```
-npm install
+# npm
+npm i vue-canvas-poster --save
+
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+## 使用组件
+
+template
+
+```html
+<vue-canvas-poster :painting="painting" @success="success"></vue-canvas-poster>
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+```javascript
+import vueCanvasPoster from 'vue-canvas-poster'
+
+components: {
+  vueCanvasPoster
+}
+
+// or Global Install
+import Vue from 'vue'
+import vueCanvasPoster from 'vue-canvas-poster'
+Vue.use(vueCanvasPoster)
 ```
 
-### Run your tests
-```
-npm run test
+## 组件参数解释
+
+###
+
+| 字段   | 类型                     | 必填 | 描述     |
+| ------ | ------------------------ | ---- | -------- |
+| width  | Number                   | 是   | 画布宽度 |
+| height | Number                   | 是   | 画布高度 |
+| views  | Object Array（对象数组） | 是   | 看下文   |
+
+### rect(矩形，线条) 字段
+
+| 字段名       | 类型   | 默认值 | 描述           |
+| ------------ | ------ | ------ | -------------- |
+| top          | Number |        | 距离顶部的距离 |
+| left         | Number |        | 距离左侧的距离 |
+| width        | Number | 0      | 宽度           |
+| height       | Number | 0      | 高度           |
+| background   | String | 否     | 背景颜色       |
+| borderRadius | Number | 否     | 圆角           |
+
+### text (文本) 字段
+
+| 字段名         | 类型    | 默认值 | 描述                                                        |
+| -------------- | ------- | ------ | ----------------------------------------------------------- |
+| top            | Number  | 是     | 距离顶部的距离                                              |
+| left           | Number  | 是     | 距离左侧的距离                                              |
+| content        | String  | ''     | 文本内容                                                    |
+| fontSize       | Number  | 是     | 文字大小                                                    |
+| color          | String  | black  | 颜色                                                        |
+| lineHeight     | Number  | 20     | 行高，多行起作用                                            |
+| breakWord      | Boolean | false  | 换行                                                        |
+| MaxLineNumber  | Int     | 2      | 根据宽度换行 ,需要设置 breakWord: true ,超出行隐藏显示为... |
+| width          | Number  |        | 文本宽度                                                    |
+| bolder         | String  | false  | 加粗                                                        |
+| textDecoration | String  | none   | underline(下划线)、line-through(贯穿线)                     |
+
+### image (图片) 字段
+
+| 字段   | 类型   | 必填 | 描述                                      |
+| ------ | ------ | ---- | ----------------------------------------- |
+| top    | Number | 是   | 距离顶部的距离                            |
+| left   | Number | 是   | 距离左侧的距离                            |
+| url    | String | 是   | 图片地址,也支持本地图片如：/images/1.jpeg |
+| width  | Number | 是   | 宽度                                      |
+| height | Number | 是   | 高度                                      |
+
+## 事件
+
+### success
+
+返回生成 base64 图片的本地 url,设置 src
+
+```javascript
+  methods: {
+    success(src) {
+      // 设置img的src
+      this.src = src
+    }
+  }
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## 问题反馈
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+有什么问题可以提 issue 或扫描微信二维码跟我联系
+
+[提 issue](https://github.com/sunnie1992/vue_canvas_poster/issues/new)
+
+## 关于我
+
+您可以扫描添加下方的微信并备注 Soul 加交流群，给我提意见，交流学习。
+
+<p>
+  <img src="https://tweapp.top1buyer.com/mine.jpg" width="256" style="display:inline;">
+</p>
+ 
+如果对你有帮助送我一颗小星星（づ￣3￣）づ╭❤～
