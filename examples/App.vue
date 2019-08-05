@@ -26,7 +26,7 @@ export default {
           },
           {
             type: 'image',
-            url: 'https://tothers.top1buyer.com/wx.qlogo.cn/mmopen/vi_32/xiclf81ib8KrmcHw6pVW5ibHRh2DuibhaptzX9QpaSS2X0I7o8xIA8CEsD5Jw6icYnw9uxvxkGSzCWLSqYrVOwwSwSA/132',
+            url: 'https://avatars0.githubusercontent.com/u/35954879?s=460&v=4',
             left: 36,
             top: 20,
             width: 80,
