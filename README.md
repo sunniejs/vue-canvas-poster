@@ -41,7 +41,7 @@ template
 ```
 
 ```javascript
-import vueCanvasPoster from 'vue-canvas-poster'
+import { vueCanvasPoster } from 'vue-canvas-poster'
 
 components: {
   vueCanvasPoster

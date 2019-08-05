@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img :src="src" alt="" class="share-image">
-    <canvas-poster class="poster" :painting="painting" @success="success"></canvas-poster>
+    <vue-canvas-poster class="poster" :painting="painting" @success="success"></vue-canvas-poster>
   </div>
 </template>
 <script>
