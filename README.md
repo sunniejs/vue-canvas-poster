@@ -18,7 +18,7 @@ vue 组件-简单属性画 Canvas 图
 
 ## 生成效果
 
-<img width="300" src="https://github.com/sunnie1992/vue_canvas_poster/blob/master/examples/assets/demo.png"/>
+<img width="300" src="https://image-static.segmentfault.com/368/423/3684237441-5d47dc1cebb1f_articlex"/>
 
 ## 安装
 
