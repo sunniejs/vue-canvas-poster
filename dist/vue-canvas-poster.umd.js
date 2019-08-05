@@ -245,21 +245,6 @@ exports.f = __webpack_require__("9e1e") ? gOPD : function getOwnPropertyDescript
 
 /***/ }),
 
-/***/ "11ec":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("d8a2");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("6525dbc1", content, true, {"sourceMap":false,"shadowMode":false});
-
-/***/ }),
-
 /***/ "1495":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -822,17 +807,6 @@ module.exports = Object.getPrototypeOf || function (O) {
 
 /***/ }),
 
-/***/ "3f17":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_7f4b0a31_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("11ec");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_7f4b0a31_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_7f4b0a31_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_7f4b0a31_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
 /***/ "41a0":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -851,6 +825,17 @@ module.exports = function (Constructor, NAME, next) {
   setToStringTag(Constructor, NAME + ' Iterator');
 };
 
+
+/***/ }),
+
+/***/ "42d8":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_77bf6958_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("f536");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_77bf6958_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_77bf6958_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_77bf6958_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -1223,6 +1208,21 @@ var defined = __webpack_require__("be13");
 module.exports = function (it) {
   return Object(defined(it));
 };
+
+
+/***/ }),
+
+/***/ "4d7e":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("2350")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".canvas[data-v-77bf6958]{position:fixed;top:2000px}", ""]);
+
+// exports
 
 
 /***/ }),
@@ -1636,6 +1636,22 @@ module.exports = function (exec, skipClosing) {
 
 /***/ }),
 
+/***/ "5dbc":
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__("d3f4");
+var setPrototypeOf = __webpack_require__("8b97").set;
+module.exports = function (that, target, C) {
+  var S = target.constructor;
+  var P;
+  if (S !== C && typeof S == 'function' && (P = S.prototype) !== C.prototype && isObject(P) && setPrototypeOf) {
+    setPrototypeOf(that, P);
+  } return that;
+};
+
+
+/***/ }),
+
 /***/ "5df3":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1825,6 +1841,1306 @@ $export($export.P, 'Array', { fill: __webpack_require__("36bd") });
 
 __webpack_require__("9c6c")('fill');
 
+
+/***/ }),
+
+/***/ "6cd3":
+/***/ (function(module, exports) {
+
+/* eslint-disable */
+!function () {
+  // alignment pattern
+  var adelta = [0, 11, 15, 19, 23, 27, 31, 16, 18, 20, 22, 24, 26, 28, 20, 22, 24, 24, 26, 28, 28, 22, 24, 24, 26, 26, 28, 28, 24, 24, 26, 26, 26, 28, 28, 24, 26, 26, 26, 28, 28]; // version block
+
+  var vpat = [0xc94, 0x5bc, 0xa99, 0x4d3, 0xbf6, 0x762, 0x847, 0x60d, 0x928, 0xb78, 0x45d, 0xa17, 0x532, 0x9a6, 0x683, 0x8c9, 0x7ec, 0xec4, 0x1e1, 0xfab, 0x08e, 0xc1a, 0x33f, 0xd75, 0x250, 0x9d5, 0x6f0, 0x8ba, 0x79f, 0xb0b, 0x42e, 0xa64, 0x541, 0xc69]; // final format bits with mask: level << 3 | mask
+
+  var fmtword = [0x77c4, 0x72f3, 0x7daa, 0x789d, 0x662f, 0x6318, 0x6c41, 0x6976, //L
+  0x5412, 0x5125, 0x5e7c, 0x5b4b, 0x45f9, 0x40ce, 0x4f97, 0x4aa0, //M
+  0x355f, 0x3068, 0x3f31, 0x3a06, 0x24b4, 0x2183, 0x2eda, 0x2bed, //Q
+  0x1689, 0x13be, 0x1ce7, 0x19d0, 0x0762, 0x0255, 0x0d0c, 0x083b //H
+  ]; // 4 per version: number of blocks 1,2; data width; ecc width
+
+  var eccblocks = [1, 0, 19, 7, 1, 0, 16, 10, 1, 0, 13, 13, 1, 0, 9, 17, 1, 0, 34, 10, 1, 0, 28, 16, 1, 0, 22, 22, 1, 0, 16, 28, 1, 0, 55, 15, 1, 0, 44, 26, 2, 0, 17, 18, 2, 0, 13, 22, 1, 0, 80, 20, 2, 0, 32, 18, 2, 0, 24, 26, 4, 0, 9, 16, 1, 0, 108, 26, 2, 0, 43, 24, 2, 2, 15, 18, 2, 2, 11, 22, 2, 0, 68, 18, 4, 0, 27, 16, 4, 0, 19, 24, 4, 0, 15, 28, 2, 0, 78, 20, 4, 0, 31, 18, 2, 4, 14, 18, 4, 1, 13, 26, 2, 0, 97, 24, 2, 2, 38, 22, 4, 2, 18, 22, 4, 2, 14, 26, 2, 0, 116, 30, 3, 2, 36, 22, 4, 4, 16, 20, 4, 4, 12, 24, 2, 2, 68, 18, 4, 1, 43, 26, 6, 2, 19, 24, 6, 2, 15, 28, 4, 0, 81, 20, 1, 4, 50, 30, 4, 4, 22, 28, 3, 8, 12, 24, 2, 2, 92, 24, 6, 2, 36, 22, 4, 6, 20, 26, 7, 4, 14, 28, 4, 0, 107, 26, 8, 1, 37, 22, 8, 4, 20, 24, 12, 4, 11, 22, 3, 1, 115, 30, 4, 5, 40, 24, 11, 5, 16, 20, 11, 5, 12, 24, 5, 1, 87, 22, 5, 5, 41, 24, 5, 7, 24, 30, 11, 7, 12, 24, 5, 1, 98, 24, 7, 3, 45, 28, 15, 2, 19, 24, 3, 13, 15, 30, 1, 5, 107, 28, 10, 1, 46, 28, 1, 15, 22, 28, 2, 17, 14, 28, 5, 1, 120, 30, 9, 4, 43, 26, 17, 1, 22, 28, 2, 19, 14, 28, 3, 4, 113, 28, 3, 11, 44, 26, 17, 4, 21, 26, 9, 16, 13, 26, 3, 5, 107, 28, 3, 13, 41, 26, 15, 5, 24, 30, 15, 10, 15, 28, 4, 4, 116, 28, 17, 0, 42, 26, 17, 6, 22, 28, 19, 6, 16, 30, 2, 7, 111, 28, 17, 0, 46, 28, 7, 16, 24, 30, 34, 0, 13, 24, 4, 5, 121, 30, 4, 14, 47, 28, 11, 14, 24, 30, 16, 14, 15, 30, 6, 4, 117, 30, 6, 14, 45, 28, 11, 16, 24, 30, 30, 2, 16, 30, 8, 4, 106, 26, 8, 13, 47, 28, 7, 22, 24, 30, 22, 13, 15, 30, 10, 2, 114, 28, 19, 4, 46, 28, 28, 6, 22, 28, 33, 4, 16, 30, 8, 4, 122, 30, 22, 3, 45, 28, 8, 26, 23, 30, 12, 28, 15, 30, 3, 10, 117, 30, 3, 23, 45, 28, 4, 31, 24, 30, 11, 31, 15, 30, 7, 7, 116, 30, 21, 7, 45, 28, 1, 37, 23, 30, 19, 26, 15, 30, 5, 10, 115, 30, 19, 10, 47, 28, 15, 25, 24, 30, 23, 25, 15, 30, 13, 3, 115, 30, 2, 29, 46, 28, 42, 1, 24, 30, 23, 28, 15, 30, 17, 0, 115, 30, 10, 23, 46, 28, 10, 35, 24, 30, 19, 35, 15, 30, 17, 1, 115, 30, 14, 21, 46, 28, 29, 19, 24, 30, 11, 46, 15, 30, 13, 6, 115, 30, 14, 23, 46, 28, 44, 7, 24, 30, 59, 1, 16, 30, 12, 7, 121, 30, 12, 26, 47, 28, 39, 14, 24, 30, 22, 41, 15, 30, 6, 14, 121, 30, 6, 34, 47, 28, 46, 10, 24, 30, 2, 64, 15, 30, 17, 4, 122, 30, 29, 14, 46, 28, 49, 10, 24, 30, 24, 46, 15, 30, 4, 18, 122, 30, 13, 32, 46, 28, 48, 14, 24, 30, 42, 32, 15, 30, 20, 4, 117, 30, 40, 7, 47, 28, 43, 22, 24, 30, 10, 67, 15, 30, 19, 6, 118, 30, 18, 31, 47, 28, 34, 34, 24, 30, 20, 61, 15, 30]; // Galois field log table
+
+  var glog = [0xff, 0x00, 0x01, 0x19, 0x02, 0x32, 0x1a, 0xc6, 0x03, 0xdf, 0x33, 0xee, 0x1b, 0x68, 0xc7, 0x4b, 0x04, 0x64, 0xe0, 0x0e, 0x34, 0x8d, 0xef, 0x81, 0x1c, 0xc1, 0x69, 0xf8, 0xc8, 0x08, 0x4c, 0x71, 0x05, 0x8a, 0x65, 0x2f, 0xe1, 0x24, 0x0f, 0x21, 0x35, 0x93, 0x8e, 0xda, 0xf0, 0x12, 0x82, 0x45, 0x1d, 0xb5, 0xc2, 0x7d, 0x6a, 0x27, 0xf9, 0xb9, 0xc9, 0x9a, 0x09, 0x78, 0x4d, 0xe4, 0x72, 0xa6, 0x06, 0xbf, 0x8b, 0x62, 0x66, 0xdd, 0x30, 0xfd, 0xe2, 0x98, 0x25, 0xb3, 0x10, 0x91, 0x22, 0x88, 0x36, 0xd0, 0x94, 0xce, 0x8f, 0x96, 0xdb, 0xbd, 0xf1, 0xd2, 0x13, 0x5c, 0x83, 0x38, 0x46, 0x40, 0x1e, 0x42, 0xb6, 0xa3, 0xc3, 0x48, 0x7e, 0x6e, 0x6b, 0x3a, 0x28, 0x54, 0xfa, 0x85, 0xba, 0x3d, 0xca, 0x5e, 0x9b, 0x9f, 0x0a, 0x15, 0x79, 0x2b, 0x4e, 0xd4, 0xe5, 0xac, 0x73, 0xf3, 0xa7, 0x57, 0x07, 0x70, 0xc0, 0xf7, 0x8c, 0x80, 0x63, 0x0d, 0x67, 0x4a, 0xde, 0xed, 0x31, 0xc5, 0xfe, 0x18, 0xe3, 0xa5, 0x99, 0x77, 0x26, 0xb8, 0xb4, 0x7c, 0x11, 0x44, 0x92, 0xd9, 0x23, 0x20, 0x89, 0x2e, 0x37, 0x3f, 0xd1, 0x5b, 0x95, 0xbc, 0xcf, 0xcd, 0x90, 0x87, 0x97, 0xb2, 0xdc, 0xfc, 0xbe, 0x61, 0xf2, 0x56, 0xd3, 0xab, 0x14, 0x2a, 0x5d, 0x9e, 0x84, 0x3c, 0x39, 0x53, 0x47, 0x6d, 0x41, 0xa2, 0x1f, 0x2d, 0x43, 0xd8, 0xb7, 0x7b, 0xa4, 0x76, 0xc4, 0x17, 0x49, 0xec, 0x7f, 0x0c, 0x6f, 0xf6, 0x6c, 0xa1, 0x3b, 0x52, 0x29, 0x9d, 0x55, 0xaa, 0xfb, 0x60, 0x86, 0xb1, 0xbb, 0xcc, 0x3e, 0x5a, 0xcb, 0x59, 0x5f, 0xb0, 0x9c, 0xa9, 0xa0, 0x51, 0x0b, 0xf5, 0x16, 0xeb, 0x7a, 0x75, 0x2c, 0xd7, 0x4f, 0xae, 0xd5, 0xe9, 0xe6, 0xe7, 0xad, 0xe8, 0x74, 0xd6, 0xf4, 0xea, 0xa8, 0x50, 0x58, 0xaf]; // Galios field exponent table
+
+  var gexp = [0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1d, 0x3a, 0x74, 0xe8, 0xcd, 0x87, 0x13, 0x26, 0x4c, 0x98, 0x2d, 0x5a, 0xb4, 0x75, 0xea, 0xc9, 0x8f, 0x03, 0x06, 0x0c, 0x18, 0x30, 0x60, 0xc0, 0x9d, 0x27, 0x4e, 0x9c, 0x25, 0x4a, 0x94, 0x35, 0x6a, 0xd4, 0xb5, 0x77, 0xee, 0xc1, 0x9f, 0x23, 0x46, 0x8c, 0x05, 0x0a, 0x14, 0x28, 0x50, 0xa0, 0x5d, 0xba, 0x69, 0xd2, 0xb9, 0x6f, 0xde, 0xa1, 0x5f, 0xbe, 0x61, 0xc2, 0x99, 0x2f, 0x5e, 0xbc, 0x65, 0xca, 0x89, 0x0f, 0x1e, 0x3c, 0x78, 0xf0, 0xfd, 0xe7, 0xd3, 0xbb, 0x6b, 0xd6, 0xb1, 0x7f, 0xfe, 0xe1, 0xdf, 0xa3, 0x5b, 0xb6, 0x71, 0xe2, 0xd9, 0xaf, 0x43, 0x86, 0x11, 0x22, 0x44, 0x88, 0x0d, 0x1a, 0x34, 0x68, 0xd0, 0xbd, 0x67, 0xce, 0x81, 0x1f, 0x3e, 0x7c, 0xf8, 0xed, 0xc7, 0x93, 0x3b, 0x76, 0xec, 0xc5, 0x97, 0x33, 0x66, 0xcc, 0x85, 0x17, 0x2e, 0x5c, 0xb8, 0x6d, 0xda, 0xa9, 0x4f, 0x9e, 0x21, 0x42, 0x84, 0x15, 0x2a, 0x54, 0xa8, 0x4d, 0x9a, 0x29, 0x52, 0xa4, 0x55, 0xaa, 0x49, 0x92, 0x39, 0x72, 0xe4, 0xd5, 0xb7, 0x73, 0xe6, 0xd1, 0xbf, 0x63, 0xc6, 0x91, 0x3f, 0x7e, 0xfc, 0xe5, 0xd7, 0xb3, 0x7b, 0xf6, 0xf1, 0xff, 0xe3, 0xdb, 0xab, 0x4b, 0x96, 0x31, 0x62, 0xc4, 0x95, 0x37, 0x6e, 0xdc, 0xa5, 0x57, 0xae, 0x41, 0x82, 0x19, 0x32, 0x64, 0xc8, 0x8d, 0x07, 0x0e, 0x1c, 0x38, 0x70, 0xe0, 0xdd, 0xa7, 0x53, 0xa6, 0x51, 0xa2, 0x59, 0xb2, 0x79, 0xf2, 0xf9, 0xef, 0xc3, 0x9b, 0x2b, 0x56, 0xac, 0x45, 0x8a, 0x09, 0x12, 0x24, 0x48, 0x90, 0x3d, 0x7a, 0xf4, 0xf5, 0xf7, 0xf3, 0xfb, 0xeb, 0xcb, 0x8b, 0x0b, 0x16, 0x2c, 0x58, 0xb0, 0x7d, 0xfa, 0xe9, 0xcf, 0x83, 0x1b, 0x36, 0x6c, 0xd8, 0xad, 0x47, 0x8e, 0x00]; // Working buffers:
+  // data input and ecc append, image working buffer, fixed part of image, run lengths for badness
+
+  var strinbuf = [],
+      eccbuf = [],
+      qrframe = [],
+      framask = [],
+      rlens = []; // Control values - width is based on version, last 4 are from table.
+
+  var version, width, neccblk1, neccblk2, datablkw, eccblkwid;
+  var ecclevel = 2; // set bit to indicate cell in qrframe is immutable.  symmetric around diagonal
+
+  function setmask(x, y) {
+    var bt;
+
+    if (x > y) {
+      bt = x;
+      x = y;
+      y = bt;
+    } // y*y = 1+3+5...
+
+
+    bt = y;
+    bt *= y;
+    bt += y;
+    bt >>= 1;
+    bt += x;
+    framask[bt] = 1;
+  } // enter alignment pattern - black to qrframe, white to mask (later black frame merged to mask)
+
+
+  function putalign(x, y) {
+    var j;
+    qrframe[x + width * y] = 1;
+
+    for (j = -2; j < 2; j++) {
+      qrframe[x + j + width * (y - 2)] = 1;
+      qrframe[x - 2 + width * (y + j + 1)] = 1;
+      qrframe[x + 2 + width * (y + j)] = 1;
+      qrframe[x + j + 1 + width * (y + 2)] = 1;
+    }
+
+    for (j = 0; j < 2; j++) {
+      setmask(x - 1, y + j);
+      setmask(x + 1, y - j);
+      setmask(x - j, y - 1);
+      setmask(x + j, y + 1);
+    }
+  } //========================================================================
+  // Reed Solomon error correction
+  // exponentiation mod N
+
+
+  function modnn(x) {
+    while (x >= 255) {
+      x -= 255;
+      x = (x >> 8) + (x & 255);
+    }
+
+    return x;
+  }
+
+  var genpoly = []; // Calculate and append ECC data to data block.  Block is in strinbuf, indexes to buffers given.
+
+  function appendrs(data, dlen, ecbuf, eclen) {
+    var i, j, fb;
+
+    for (i = 0; i < eclen; i++) {
+      strinbuf[ecbuf + i] = 0;
+    }
+
+    for (i = 0; i < dlen; i++) {
+      fb = glog[strinbuf[data + i] ^ strinbuf[ecbuf]];
+      if (fb != 255)
+        /* fb term is non-zero */
+        for (j = 1; j < eclen; j++) {
+          strinbuf[ecbuf + j - 1] = strinbuf[ecbuf + j] ^ gexp[modnn(fb + genpoly[eclen - j])];
+        } else for (j = ecbuf; j < ecbuf + eclen; j++) {
+        strinbuf[j] = strinbuf[j + 1];
+      }
+      strinbuf[ecbuf + eclen - 1] = fb == 255 ? 0 : gexp[modnn(fb + genpoly[0])];
+    }
+  } //========================================================================
+  // Frame data insert following the path rules
+  // check mask - since symmetrical use half.
+
+
+  function ismasked(x, y) {
+    var bt;
+
+    if (x > y) {
+      bt = x;
+      x = y;
+      y = bt;
+    }
+
+    bt = y;
+    bt += y * y;
+    bt >>= 1;
+    bt += x;
+    return framask[bt];
+  } //========================================================================
+  //  Apply the selected mask out of the 8.
+
+
+  function applymask(m) {
+    var x, y, r3x, r3y;
+
+    switch (m) {
+      case 0:
+        for (y = 0; y < width; y++) {
+          for (x = 0; x < width; x++) {
+            if (!(x + y & 1) && !ismasked(x, y)) qrframe[x + y * width] ^= 1;
+          }
+        }
+
+        break;
+
+      case 1:
+        for (y = 0; y < width; y++) {
+          for (x = 0; x < width; x++) {
+            if (!(y & 1) && !ismasked(x, y)) qrframe[x + y * width] ^= 1;
+          }
+        }
+
+        break;
+
+      case 2:
+        for (y = 0; y < width; y++) {
+          for (r3x = 0, x = 0; x < width; x++, r3x++) {
+            if (r3x == 3) r3x = 0;
+            if (!r3x && !ismasked(x, y)) qrframe[x + y * width] ^= 1;
+          }
+        }
+
+        break;
+
+      case 3:
+        for (r3y = 0, y = 0; y < width; y++, r3y++) {
+          if (r3y == 3) r3y = 0;
+
+          for (r3x = r3y, x = 0; x < width; x++, r3x++) {
+            if (r3x == 3) r3x = 0;
+            if (!r3x && !ismasked(x, y)) qrframe[x + y * width] ^= 1;
+          }
+        }
+
+        break;
+
+      case 4:
+        for (y = 0; y < width; y++) {
+          for (r3x = 0, r3y = y >> 1 & 1, x = 0; x < width; x++, r3x++) {
+            if (r3x == 3) {
+              r3x = 0;
+              r3y = !r3y;
+            }
+
+            if (!r3y && !ismasked(x, y)) qrframe[x + y * width] ^= 1;
+          }
+        }
+
+        break;
+
+      case 5:
+        for (r3y = 0, y = 0; y < width; y++, r3y++) {
+          if (r3y == 3) r3y = 0;
+
+          for (r3x = 0, x = 0; x < width; x++, r3x++) {
+            if (r3x == 3) r3x = 0;
+            if (!((x & y & 1) + !(!r3x | !r3y)) && !ismasked(x, y)) qrframe[x + y * width] ^= 1;
+          }
+        }
+
+        break;
+
+      case 6:
+        for (r3y = 0, y = 0; y < width; y++, r3y++) {
+          if (r3y == 3) r3y = 0;
+
+          for (r3x = 0, x = 0; x < width; x++, r3x++) {
+            if (r3x == 3) r3x = 0;
+            if (!((x & y & 1) + (r3x && r3x == r3y) & 1) && !ismasked(x, y)) qrframe[x + y * width] ^= 1;
+          }
+        }
+
+        break;
+
+      case 7:
+        for (r3y = 0, y = 0; y < width; y++, r3y++) {
+          if (r3y == 3) r3y = 0;
+
+          for (r3x = 0, x = 0; x < width; x++, r3x++) {
+            if (r3x == 3) r3x = 0;
+            if (!((r3x && r3x == r3y) + (x + y & 1) & 1) && !ismasked(x, y)) qrframe[x + y * width] ^= 1;
+          }
+        }
+
+        break;
+    }
+
+    return;
+  } // Badness coefficients.
+
+
+  var N1 = 3,
+      N2 = 3,
+      N3 = 40,
+      N4 = 10; // Using the table of the length of each run, calculate the amount of bad image 
+  // - long runs or those that look like finders; called twice, once each for X and Y
+
+  function badruns(length) {
+    var i;
+    var runsbad = 0;
+
+    for (i = 0; i <= length; i++) {
+      if (rlens[i] >= 5) runsbad += N1 + rlens[i] - 5;
+    } // BwBBBwB as in finder
+
+
+    for (i = 3; i < length - 1; i += 2) {
+      if (rlens[i - 2] == rlens[i + 2] && rlens[i + 2] == rlens[i - 1] && rlens[i - 1] == rlens[i + 1] && rlens[i - 1] * 3 == rlens[i] // white around the black pattern? Not part of spec
+      && (rlens[i - 3] == 0 // beginning
+      || i + 3 > length // end
+      || rlens[i - 3] * 3 >= rlens[i] * 4 || rlens[i + 3] * 3 >= rlens[i] * 4)) runsbad += N3;
+    }
+
+    return runsbad;
+  } // Calculate how bad the masked image is - blocks, imbalance, runs, or finders.
+
+
+  function badcheck() {
+    var x, y, h, b, b1;
+    var thisbad = 0;
+    var bw = 0; // blocks of same color.
+
+    for (y = 0; y < width - 1; y++) {
+      for (x = 0; x < width - 1; x++) {
+        if (qrframe[x + width * y] && qrframe[x + 1 + width * y] && qrframe[x + width * (y + 1)] && qrframe[x + 1 + width * (y + 1)] || // all black
+        !(qrframe[x + width * y] || qrframe[x + 1 + width * y] || qrframe[x + width * (y + 1)] || qrframe[x + 1 + width * (y + 1)])) // all white
+          thisbad += N2;
+      }
+    } // X runs
+
+
+    for (y = 0; y < width; y++) {
+      rlens[0] = 0;
+
+      for (h = b = x = 0; x < width; x++) {
+        if ((b1 = qrframe[x + width * y]) == b) rlens[h]++;else rlens[++h] = 1;
+        b = b1;
+        bw += b ? 1 : -1;
+      }
+
+      thisbad += badruns(h);
+    } // black/white imbalance
+
+
+    if (bw < 0) bw = -bw;
+    var big = bw;
+    var count = 0;
+    big += big << 2;
+    big <<= 1;
+
+    while (big > width * width) {
+      big -= width * width, count++;
+    }
+
+    thisbad += count * N4; // Y runs
+
+    for (x = 0; x < width; x++) {
+      rlens[0] = 0;
+
+      for (h = b = y = 0; y < width; y++) {
+        if ((b1 = qrframe[x + width * y]) == b) rlens[h]++;else rlens[++h] = 1;
+        b = b1;
+      }
+
+      thisbad += badruns(h);
+    }
+
+    return thisbad;
+  }
+
+  function genframe(instring) {
+    var x, y, k, t, v, i, j, m; // find the smallest version that fits the string
+
+    t = instring.length;
+    version = 0;
+
+    do {
+      version++;
+      k = (ecclevel - 1) * 4 + (version - 1) * 16;
+      neccblk1 = eccblocks[k++];
+      neccblk2 = eccblocks[k++];
+      datablkw = eccblocks[k++];
+      eccblkwid = eccblocks[k];
+      k = datablkw * (neccblk1 + neccblk2) + neccblk2 - 3 + (version <= 9);
+      if (t <= k) break;
+    } while (version < 40); // FIXME - insure that it fits insted of being truncated
+
+
+    width = 17 + 4 * version; // allocate, clear and setup data structures
+
+    v = datablkw + (datablkw + eccblkwid) * (neccblk1 + neccblk2) + neccblk2;
+
+    for (t = 0; t < v; t++) {
+      eccbuf[t] = 0;
+    }
+
+    strinbuf = instring.slice(0);
+
+    for (t = 0; t < width * width; t++) {
+      qrframe[t] = 0;
+    }
+
+    for (t = 0; t < (width * (width + 1) + 1) / 2; t++) {
+      framask[t] = 0;
+    } // insert finders - black to frame, white to mask
+
+
+    for (t = 0; t < 3; t++) {
+      k = 0;
+      y = 0;
+      if (t == 1) k = width - 7;
+      if (t == 2) y = width - 7;
+      qrframe[y + 3 + width * (k + 3)] = 1;
+
+      for (x = 0; x < 6; x++) {
+        qrframe[y + x + width * k] = 1;
+        qrframe[y + width * (k + x + 1)] = 1;
+        qrframe[y + 6 + width * (k + x)] = 1;
+        qrframe[y + x + 1 + width * (k + 6)] = 1;
+      }
+
+      for (x = 1; x < 5; x++) {
+        setmask(y + x, k + 1);
+        setmask(y + 1, k + x + 1);
+        setmask(y + 5, k + x);
+        setmask(y + x + 1, k + 5);
+      }
+
+      for (x = 2; x < 4; x++) {
+        qrframe[y + x + width * (k + 2)] = 1;
+        qrframe[y + 2 + width * (k + x + 1)] = 1;
+        qrframe[y + 4 + width * (k + x)] = 1;
+        qrframe[y + x + 1 + width * (k + 4)] = 1;
+      }
+    } // alignment blocks
+
+
+    if (version > 1) {
+      t = adelta[version];
+      y = width - 7;
+
+      for (;;) {
+        x = width - 7;
+
+        while (x > t - 3) {
+          putalign(x, y);
+          if (x < t) break;
+          x -= t;
+        }
+
+        if (y <= t + 9) break;
+        y -= t;
+        putalign(6, y);
+        putalign(y, 6);
+      }
+    } // single black
+
+
+    qrframe[8 + width * (width - 8)] = 1; // timing gap - mask only
+
+    for (y = 0; y < 7; y++) {
+      setmask(7, y);
+      setmask(width - 8, y);
+      setmask(7, y + width - 7);
+    }
+
+    for (x = 0; x < 8; x++) {
+      setmask(x, 7);
+      setmask(x + width - 8, 7);
+      setmask(x, width - 8);
+    } // reserve mask-format area
+
+
+    for (x = 0; x < 9; x++) {
+      setmask(x, 8);
+    }
+
+    for (x = 0; x < 8; x++) {
+      setmask(x + width - 8, 8);
+      setmask(8, x);
+    }
+
+    for (y = 0; y < 7; y++) {
+      setmask(8, y + width - 7);
+    } // timing row/col
+
+
+    for (x = 0; x < width - 14; x++) {
+      if (x & 1) {
+        setmask(8 + x, 6);
+        setmask(6, 8 + x);
+      } else {
+        qrframe[8 + x + width * 6] = 1;
+        qrframe[6 + width * (8 + x)] = 1;
+      }
+    } // version block
+
+
+    if (version > 6) {
+      t = vpat[version - 7];
+      k = 17;
+
+      for (x = 0; x < 6; x++) {
+        for (y = 0; y < 3; y++, k--) {
+          if (1 & (k > 11 ? version >> k - 12 : t >> k)) {
+            qrframe[5 - x + width * (2 - y + width - 11)] = 1;
+            qrframe[2 - y + width - 11 + width * (5 - x)] = 1;
+          } else {
+            setmask(5 - x, 2 - y + width - 11);
+            setmask(2 - y + width - 11, 5 - x);
+          }
+        }
+      }
+    } // sync mask bits - only set above for white spaces, so add in black bits
+
+
+    for (y = 0; y < width; y++) {
+      for (x = 0; x <= y; x++) {
+        if (qrframe[x + width * y]) setmask(x, y);
+      }
+    } // convert string to bitstream
+    // 8 bit data to QR-coded 8 bit data (numeric or alphanum, or kanji not supported)
+
+
+    v = strinbuf.length; // string to array
+
+    for (i = 0; i < v; i++) {
+      eccbuf[i] = strinbuf.charCodeAt(i);
+    }
+
+    strinbuf = eccbuf.slice(0); // calculate max string length
+
+    x = datablkw * (neccblk1 + neccblk2) + neccblk2;
+
+    if (v >= x - 2) {
+      v = x - 2;
+      if (version > 9) v--;
+    } // shift and repack to insert length prefix
+
+
+    i = v;
+
+    if (version > 9) {
+      strinbuf[i + 2] = 0;
+      strinbuf[i + 3] = 0;
+
+      while (i--) {
+        t = strinbuf[i];
+        strinbuf[i + 3] |= 255 & t << 4;
+        strinbuf[i + 2] = t >> 4;
+      }
+
+      strinbuf[2] |= 255 & v << 4;
+      strinbuf[1] = v >> 4;
+      strinbuf[0] = 0x40 | v >> 12;
+    } else {
+      strinbuf[i + 1] = 0;
+      strinbuf[i + 2] = 0;
+
+      while (i--) {
+        t = strinbuf[i];
+        strinbuf[i + 2] |= 255 & t << 4;
+        strinbuf[i + 1] = t >> 4;
+      }
+
+      strinbuf[1] |= 255 & v << 4;
+      strinbuf[0] = 0x40 | v >> 4;
+    } // fill to end with pad pattern
+
+
+    i = v + 3 - (version < 10);
+
+    while (i < x) {
+      strinbuf[i++] = 0xec; // buffer has room    if (i == x)      break;
+
+      strinbuf[i++] = 0x11;
+    } // calculate and append ECC
+    // calculate generator polynomial
+
+
+    genpoly[0] = 1;
+
+    for (i = 0; i < eccblkwid; i++) {
+      genpoly[i + 1] = 1;
+
+      for (j = i; j > 0; j--) {
+        genpoly[j] = genpoly[j] ? genpoly[j - 1] ^ gexp[modnn(glog[genpoly[j]] + i)] : genpoly[j - 1];
+      }
+
+      genpoly[0] = gexp[modnn(glog[genpoly[0]] + i)];
+    }
+
+    for (i = 0; i <= eccblkwid; i++) {
+      genpoly[i] = glog[genpoly[i]];
+    } // use logs for genpoly[] to save calc step
+    // append ecc to data buffer
+
+
+    k = x;
+    y = 0;
+
+    for (i = 0; i < neccblk1; i++) {
+      appendrs(y, datablkw, k, eccblkwid);
+      y += datablkw;
+      k += eccblkwid;
+    }
+
+    for (i = 0; i < neccblk2; i++) {
+      appendrs(y, datablkw + 1, k, eccblkwid);
+      y += datablkw + 1;
+      k += eccblkwid;
+    } // interleave blocks
+
+
+    y = 0;
+
+    for (i = 0; i < datablkw; i++) {
+      for (j = 0; j < neccblk1; j++) {
+        eccbuf[y++] = strinbuf[i + j * datablkw];
+      }
+
+      for (j = 0; j < neccblk2; j++) {
+        eccbuf[y++] = strinbuf[neccblk1 * datablkw + i + j * (datablkw + 1)];
+      }
+    }
+
+    for (j = 0; j < neccblk2; j++) {
+      eccbuf[y++] = strinbuf[neccblk1 * datablkw + i + j * (datablkw + 1)];
+    }
+
+    for (i = 0; i < eccblkwid; i++) {
+      for (j = 0; j < neccblk1 + neccblk2; j++) {
+        eccbuf[y++] = strinbuf[x + i + j * eccblkwid];
+      }
+    }
+
+    strinbuf = eccbuf; // pack bits into frame avoiding masked area.
+
+    x = y = width - 1;
+    k = v = 1; // up, minus
+
+    /* inteleaved data and ecc codes */
+
+    m = (datablkw + eccblkwid) * (neccblk1 + neccblk2) + neccblk2;
+
+    for (i = 0; i < m; i++) {
+      t = strinbuf[i];
+
+      for (j = 0; j < 8; j++, t <<= 1) {
+        if (0x80 & t) qrframe[x + width * y] = 1;
+
+        do {
+          // find next fill position
+          if (v) x--;else {
+            x++;
+
+            if (k) {
+              if (y != 0) y--;else {
+                x -= 2;
+                k = !k;
+
+                if (x == 6) {
+                  x--;
+                  y = 9;
+                }
+              }
+            } else {
+              if (y != width - 1) y++;else {
+                x -= 2;
+                k = !k;
+
+                if (x == 6) {
+                  x--;
+                  y -= 8;
+                }
+              }
+            }
+          }
+          v = !v;
+        } while (ismasked(x, y));
+      }
+    } // save pre-mask copy of frame
+
+
+    strinbuf = qrframe.slice(0);
+    t = 0; // best
+
+    y = 30000; // demerit
+    // for instead of while since in original arduino code
+    // if an early mask was "good enough" it wouldn't try for a better one
+    // since they get more complex and take longer.
+
+    for (k = 0; k < 8; k++) {
+      applymask(k); // returns black-white imbalance
+
+      x = badcheck();
+
+      if (x < y) {
+        // current mask better than previous best?
+        y = x;
+        t = k;
+      }
+
+      if (t == 7) break; // don't increment i to a void redoing mask
+
+      qrframe = strinbuf.slice(0); // reset for next pass
+    }
+
+    if (t != k) // redo best mask - none good enough, last wasn't t
+      applymask(t); // add in final mask/ecclevel bytes
+
+    y = fmtword[t + (ecclevel - 1 << 3)]; // low byte
+
+    for (k = 0; k < 8; k++, y >>= 1) {
+      if (y & 1) {
+        qrframe[width - 1 - k + width * 8] = 1;
+        if (k < 6) qrframe[8 + width * k] = 1;else qrframe[8 + width * (k + 1)] = 1;
+      }
+    } // high byte
+
+
+    for (k = 0; k < 7; k++, y >>= 1) {
+      if (y & 1) {
+        qrframe[8 + width * (width - 7 + k)] = 1;
+        if (k) qrframe[6 - k + width * 8] = 1;else qrframe[7 + width * 8] = 1;
+      }
+    }
+
+    return qrframe;
+  }
+
+  var _canvas = null;
+  var api = {
+    get ecclevel() {
+      return ecclevel;
+    },
+
+    set ecclevel(val) {
+      ecclevel = val;
+    },
+
+    get size() {
+      return _size;
+    },
+
+    set size(val) {
+      _size = val;
+    },
+
+    get canvas() {
+      return _canvas;
+    },
+
+    set canvas(el) {
+      _canvas = el;
+    },
+
+    getFrame: function getFrame(string) {
+      return genframe(string);
+    },
+    //这里的utf16to8(str)是对Text中的字符串进行转码，让其支持中文
+    utf16to8: function utf16to8(str) {
+      var out, i, len, c;
+      out = "";
+      len = str.length;
+
+      for (i = 0; i < len; i++) {
+        c = str.charCodeAt(i);
+
+        if (c >= 0x0001 && c <= 0x007F) {
+          out += str.charAt(i);
+        } else if (c > 0x07FF) {
+          out += String.fromCharCode(0xE0 | c >> 12 & 0x0F);
+          out += String.fromCharCode(0x80 | c >> 6 & 0x3F);
+          out += String.fromCharCode(0x80 | c >> 0 & 0x3F);
+        } else {
+          out += String.fromCharCode(0xC0 | c >> 6 & 0x1F);
+          out += String.fromCharCode(0x80 | c >> 0 & 0x3F);
+        }
+      }
+
+      return out;
+    },
+
+    /**
+     * 新增$this参数，传入组件的this,兼容在组件中生成
+     * @param bg 目前只能设置颜色值
+     */
+    draw: function draw(str, ctx, startX, startY, cavW, cavH, bg, color, $this, ecc) {
+      var that = this;
+      ecclevel = ecc || ecclevel;
+
+      if (!ctx) {
+        console.warn('No canvas provided to draw QR code in!');
+        return;
+      }
+
+      var size = Math.min(cavW, cavH);
+      str = that.utf16to8(str); //增加中文显示
+
+      var frame = that.getFrame(str);
+      var px = size / width;
+
+      if (bg) {
+        ctx.fillStyle = bg;
+        ctx.fillRect(startX, startY, cavW, cavW);
+      }
+
+      ctx.fillStyle = color || 'black';
+
+      for (var i = 0; i < width; i++) {
+        for (var j = 0; j < width; j++) {
+          if (frame[j * width + i]) {
+            ctx.fillRect(startX + px * i, startY + px * j, px, px);
+          }
+        }
+      }
+    }
+  };
+  module.exports = {
+    api: api // exports.draw = api;
+
+  };
+}();
+
+/***/ }),
+
+/***/ "6ecc":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"35b68e96-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/lib/canvas-poster.vue?vue&type=template&id=77bf6958&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('canvas',{ref:"canvas",staticClass:"canvas",attrs:{"width":_vm.width,"height":_vm.height}})])}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/lib/canvas-poster.vue?vue&type=template&id=77bf6958&scoped=true&
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es7.object.get-own-property-descriptors.js
+var es7_object_get_own_property_descriptors = __webpack_require__("8e6e");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.object.keys.js
+var es6_object_keys = __webpack_require__("456d");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.number.constructor.js
+var es6_number_constructor = __webpack_require__("c5f6");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.fill.js
+var es6_array_fill = __webpack_require__("6c7b");
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js
+var define_property = __webpack_require__("85f2");
+var define_property_default = /*#__PURE__*/__webpack_require__.n(define_property);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    define_property_default()(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+// EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom.iterable.js
+var web_dom_iterable = __webpack_require__("ac6a");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.iterator.js
+var es6_array_iterator = __webpack_require__("cadf");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.string.iterator.js
+var es6_string_iterator = __webpack_require__("5df3");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.promise.js
+var es6_promise = __webpack_require__("551c");
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/lib/canvas-poster.vue?vue&type=script&lang=js&
+
+
+
+
+
+
+
+
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+//
+//
+//
+//
+//
+var QR = __webpack_require__("6cd3");
+
+/* harmony default export */ var canvas_postervue_type_script_lang_js_ = ({
+  name: 'CanvasPoster',
+  components: {},
+  props: {
+    painting: {
+      type: Object,
+      value: {}
+    }
+  },
+  computed: {},
+  watch: {
+    painting: {
+      handler: 'handlePaint',
+      deep: true,
+      immediate: true
+    }
+  },
+  data: function data() {
+    return {
+      showCanvas: false,
+      width: 100,
+      height: 100,
+      imageList: [],
+      isPainting: false,
+      canvas: null,
+      ctx: null
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.$nextTick(function () {
+      _this.canvas = _this.$refs.canvas; // 指定canvas
+
+      _this.ctx = _this.canvas.getContext("2d"); //设置2D渲染区域
+    });
+  },
+  methods: {
+    // 开始绘图
+    handlePaint: function handlePaint(newVal, oldVal) {
+      var _this2 = this;
+
+      var _this$painting = this.painting,
+          width = _this$painting.width,
+          height = _this$painting.height,
+          views = _this$painting.views;
+      this.width = width;
+      this.height = height;
+      var inter = setInterval(function () {
+        if (_this2.ctx) {
+          clearInterval(inter); // 重新绘图
+
+          _this2.ctx.clearRect(0, 0, _this2.canvas.width, _this2.canvas.height);
+
+          _this2.ctx.save();
+
+          _this2.getImages(views);
+        }
+      }, 100);
+    },
+    //加载图片
+    loadImage: function loadImage(url) {
+      return new Promise(function (resolve, reject) {
+        var img = new Image();
+        img.setAttribute('crossorigin', 'anonymous');
+
+        img.onload = function () {
+          return resolve(img);
+        };
+
+        img.onerror = function () {
+          return reject("\u4E0B\u8F7D\u56FE\u7247\u5931\u8D25 ".concat(url));
+        };
+
+        img.src = url;
+      });
+    },
+    // 加载图片
+    getImages: function getImages(views) {
+      var _this3 = this;
+
+      var imageList = [];
+
+      for (var i = 0; i < views.length; i++) {
+        if (views[i].type === 'image') {
+          imageList.push(this.loadImage(views[i].url));
+        }
+      }
+
+      Promise.all(imageList).then(function (res) {
+        _this3.imageList = res;
+
+        _this3.startPainting();
+      });
+    },
+    startPainting: function startPainting() {
+      var views = this.painting.views;
+
+      for (var i = 0, imageIndex = 0; i < views.length; i++) {
+        if (views[i].type === 'image') {
+          this.drawImage(_objectSpread({}, views[i], {
+            img: this.imageList[imageIndex]
+          }));
+          imageIndex++;
+        } else if (views[i].type === 'text') {
+          this.drawText(views[i]);
+        } else if (views[i].type === 'rect') {
+          this.drawRect(views[i]);
+        } else if (views[i].type === 'qrcode') {
+          this.drawQRCode(views[i]);
+        }
+      }
+
+      var imageBase64 = this.canvas.toDataURL("image/png");
+      this.$emit('success', imageBase64);
+    },
+
+    /**
+      * 根据 radius 进行裁减
+     */
+    _doClip: function _doClip(left, top, width, height, radius) {
+      this.ctx.beginPath(); // 左上角 
+
+      this.ctx.arc(left + radius, top + radius, radius, Math.PI, Math.PI * 1.5); // border-top
+
+      this.ctx.moveTo(left + radius, top);
+      this.ctx.lineTo(left + width - radius, top);
+      this.ctx.lineTo(left + width, top + radius); // 右上角
+
+      this.ctx.arc(left + width - radius, top + radius, radius, Math.PI * 1.5, Math.PI * 2); // border-right 
+
+      this.ctx.lineTo(left + width, top + height - radius);
+      this.ctx.lineTo(left + width - radius, top + height); // 右下角 
+
+      this.ctx.arc(left + width - radius, top + height - radius, radius, 0, Math.PI * 0.5); // border-bottom
+
+      this.ctx.lineTo(left + radius, top + height);
+      this.ctx.lineTo(left, top + height - radius); // 左下角 
+
+      this.ctx.arc(left + radius, top + height - radius, radius, Math.PI * 0.5, Math.PI); // border-left
+
+      this.ctx.lineTo(left, top + radius);
+      this.ctx.lineTo(left + radius, top); // 这里是使用 fill 还是 stroke都可以，二选一即可，但是需要与上面对应
+
+      this.ctx.fill();
+      this.ctx.closePath();
+    },
+    _doRoate: function _doRoate(left, top, height, width, deg) {
+      this.ctx.translate(left + width / 2, top + height / 2);
+      this.ctx.rotate(deg * Math.PI / 180);
+    },
+    drawImage: function drawImage(params) {
+      this.ctx.save();
+      var img = params.img,
+          _params$top = params.top,
+          top = _params$top === void 0 ? 0 : _params$top,
+          _params$left = params.left,
+          left = _params$left === void 0 ? 0 : _params$left,
+          _params$width = params.width,
+          width = _params$width === void 0 ? 0 : _params$width,
+          _params$height = params.height,
+          height = _params$height === void 0 ? 0 : _params$height,
+          _params$radius = params.radius,
+          radius = _params$radius === void 0 ? 0 : _params$radius,
+          _params$deg = params.deg,
+          deg = _params$deg === void 0 ? 0 : _params$deg;
+
+      if (radius) {
+        this._doClip(left, top, width, height, radius);
+
+        this.ctx.clip();
+        this.ctx.drawImage(img, left, top, width, height);
+      } else {
+        if (deg !== 0) {
+          this._doRoate(left, top, height, width, deg);
+
+          this.ctx.drawImage(img, -width / 2, -height / 2, width, height);
+        } else {
+          this.ctx.drawImage(img, left, top, width, height);
+        }
+      }
+
+      this.ctx.restore();
+    },
+    drawQRCode: function drawQRCode(params) {
+      this.ctx.save();
+      var _params$width2 = params.width,
+          width = _params$width2 === void 0 ? 0 : _params$width2,
+          _params$height2 = params.height,
+          height = _params$height2 === void 0 ? 0 : _params$height2,
+          _params$left2 = params.left,
+          left = _params$left2 === void 0 ? 0 : _params$left2,
+          _params$top2 = params.top,
+          top = _params$top2 === void 0 ? 0 : _params$top2,
+          content = params.content,
+          background = params.background,
+          color = params.color;
+      console.log(width, height, content, background, color);
+      QR.api.draw(content, this.ctx, left, top, width, height, background, color);
+      this.ctx.restore();
+    },
+    // 写字
+    drawText: function drawText(params) {
+      this.ctx.save();
+      var _params$MaxLineNumber = params.MaxLineNumber,
+          MaxLineNumber = _params$MaxLineNumber === void 0 ? 2 : _params$MaxLineNumber,
+          _params$breakWord = params.breakWord,
+          breakWord = _params$breakWord === void 0 ? false : _params$breakWord,
+          _params$color = params.color,
+          color = _params$color === void 0 ? 'black' : _params$color,
+          _params$content = params.content,
+          content = _params$content === void 0 ? '' : _params$content,
+          _params$fontSize = params.fontSize,
+          fontSize = _params$fontSize === void 0 ? 16 : _params$fontSize,
+          _params$top3 = params.top,
+          top = _params$top3 === void 0 ? 0 : _params$top3,
+          _params$left3 = params.left,
+          left = _params$left3 === void 0 ? 0 : _params$left3,
+          _params$lineHeight = params.lineHeight,
+          lineHeight = _params$lineHeight === void 0 ? 20 : _params$lineHeight,
+          _params$textAlign = params.textAlign,
+          textAlign = _params$textAlign === void 0 ? 'left' : _params$textAlign,
+          width = params.width,
+          _params$bolder = params.bolder,
+          bolder = _params$bolder === void 0 ? false : _params$bolder,
+          _params$textDecoratio = params.textDecoration,
+          textDecoration = _params$textDecoratio === void 0 ? 'none' : _params$textDecoratio;
+      this.ctx.beginPath();
+      this.ctx.textBaseline = 'top';
+      this.ctx.textAlign = textAlign;
+      this.ctx.fillStyle = color; //  this.ctx.font = "normal 36px Arial";
+
+      this.ctx.font = "normal ".concat(fontSize, "px Arial");
+
+      if (!breakWord) {
+        this.ctx.fillText(content, left, top);
+        this.drawTextLine(left, top, textDecoration, color, fontSize, content);
+      } else {
+        var fillText = '';
+        var fillTop = top;
+        var lineNum = 1;
+
+        for (var i = 0; i < content.length; i++) {
+          fillText += [content[i]];
+
+          if (this.ctx.measureText(fillText).width > width) {
+            if (lineNum === MaxLineNumber) {
+              if (i !== content.length) {
+                fillText = fillText.substring(0, fillText.length - 1) + '...';
+                this.ctx.fillText(fillText, left, fillTop);
+                this.drawTextLine(left, fillTop, textDecoration, color, fontSize, fillText);
+                fillText = '';
+                break;
+              }
+            }
+
+            this.ctx.fillText(fillText, left, fillTop);
+            this.drawTextLine(left, fillTop, textDecoration, color, fontSize, fillText);
+            fillText = '';
+            fillTop += lineHeight;
+            lineNum++;
+          }
+        }
+
+        this.ctx.fillText(fillText, left, fillTop);
+        this.drawTextLine(left, fillTop, textDecoration, color, fontSize, fillText);
+      }
+
+      this.ctx.restore();
+
+      if (bolder) {
+        this.drawText(_objectSpread({}, params, {
+          left: left + 0.3,
+          top: top + 0.3,
+          bolder: false,
+          textDecoration: 'none'
+        }));
+      }
+    },
+    // 画直线
+    drawTextLine: function drawTextLine(left, top, textDecoration, color, fontSize, content) {
+      if (textDecoration === 'underline') {
+        this.drawRect({
+          background: color,
+          top: top + fontSize * 1.2,
+          left: left - 1,
+          width: this.ctx.measureText(content).width + 3,
+          height: 1
+        });
+      } else if (textDecoration === 'line-through') {
+        this.drawRect({
+          background: color,
+          top: top + fontSize * 0.4,
+          left: left - 1,
+          width: this.ctx.measureText(content).width + 3,
+          height: 1
+        });
+      }
+    },
+    _getAngle: function _getAngle(angle) {
+      return Number(angle) * Math.PI / 180;
+    },
+    // 画矩形
+    drawRect: function drawRect(params) {
+      this.ctx.save();
+      var _params$background = params.background,
+          background = _params$background === void 0 ? 'white' : _params$background,
+          _params$top4 = params.top,
+          top = _params$top4 === void 0 ? 0 : _params$top4,
+          _params$left4 = params.left,
+          left = _params$left4 === void 0 ? 0 : _params$left4,
+          _params$width3 = params.width,
+          width = _params$width3 === void 0 ? 0 : _params$width3,
+          _params$height3 = params.height,
+          height = _params$height3 === void 0 ? 0 : _params$height3,
+          _params$radius2 = params.radius,
+          radius = _params$radius2 === void 0 ? 0 : _params$radius2,
+          _params$deg2 = params.deg,
+          deg = _params$deg2 === void 0 ? 0 : _params$deg2;
+      this.ctx.fillStyle = background;
+
+      if (radius) {
+        this._doClip(left, top, width, height, radius);
+      } else {
+        if (deg !== 0) {
+          this._doRoate(left, top, height, width, deg);
+
+          this.ctx.fillRect(-width / 2, -height / 2, width, height);
+        } else {
+          this.ctx.fillRect(left, top, width, height);
+        } // this.ctx.fillRect(left, top, width, height)
+
+      }
+
+      this.ctx.restore();
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/lib/canvas-poster.vue?vue&type=script&lang=js&
+ /* harmony default export */ var lib_canvas_postervue_type_script_lang_js_ = (canvas_postervue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/lib/canvas-poster.vue?vue&type=style&index=0&id=77bf6958&scoped=true&lang=css&
+var canvas_postervue_type_style_index_0_id_77bf6958_scoped_true_lang_css_ = __webpack_require__("42d8");
+
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+// CONCATENATED MODULE: ./src/lib/canvas-poster.vue
+
+
+
+
+
+
+/* normalize component */
+
+var component = normalizeComponent(
+  lib_canvas_postervue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  "77bf6958",
+  null
+  
+)
+
+/* harmony default export */ var canvas_poster = __webpack_exports__["a"] = (component.exports);
 
 /***/ }),
 
@@ -2048,6 +3364,38 @@ exports.f = __webpack_require__("9e1e") ? Object.defineProperty : function defin
 
 /***/ }),
 
+/***/ "8b97":
+/***/ (function(module, exports, __webpack_require__) {
+
+// Works with __proto__ only. Old v8 can't work with null proto objects.
+/* eslint-disable no-proto */
+var isObject = __webpack_require__("d3f4");
+var anObject = __webpack_require__("cb7c");
+var check = function (O, proto) {
+  anObject(O);
+  if (!isObject(proto) && proto !== null) throw TypeError(proto + ": can't set as prototype!");
+};
+module.exports = {
+  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
+    function (test, buggy, set) {
+      try {
+        set = __webpack_require__("9b43")(Function.call, __webpack_require__("11e9").f(Object.prototype, '__proto__').set, 2);
+        set(test, []);
+        buggy = !(test instanceof Array);
+      } catch (e) { buggy = true; }
+      return function setPrototypeOf(O, proto) {
+        check(O, proto);
+        if (buggy) O.__proto__ = proto;
+        else set(O, proto);
+        return O;
+      };
+    }({}, false) : undefined),
+  check: check
+};
+
+
+/***/ }),
+
 /***/ "8e60":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2235,6 +3583,43 @@ module.exports.f = function (C) {
 
 /***/ }),
 
+/***/ "aa77":
+/***/ (function(module, exports, __webpack_require__) {
+
+var $export = __webpack_require__("5ca1");
+var defined = __webpack_require__("be13");
+var fails = __webpack_require__("79e5");
+var spaces = __webpack_require__("fdef");
+var space = '[' + spaces + ']';
+var non = '\u200b\u0085';
+var ltrim = RegExp('^' + space + space + '*');
+var rtrim = RegExp(space + space + '*$');
+
+var exporter = function (KEY, exec, ALIAS) {
+  var exp = {};
+  var FORCE = fails(function () {
+    return !!spaces[KEY]() || non[KEY]() != non;
+  });
+  var fn = exp[KEY] = FORCE ? exec(trim) : spaces[KEY];
+  if (ALIAS) exp[ALIAS] = fn;
+  $export($export.P + $export.F * FORCE, 'String', exp);
+};
+
+// 1 -> String#trimLeft
+// 2 -> String#trimRight
+// 3 -> String#trim
+var trim = exporter.trim = function (string, TYPE) {
+  string = String(defined(string));
+  if (TYPE & 1) string = string.replace(ltrim, '');
+  if (TYPE & 2) string = string.replace(rtrim, '');
+  return string;
+};
+
+module.exports = exporter;
+
+
+/***/ }),
+
 /***/ "ac6a":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2376,12 +3761,116 @@ module.exports = function (IS_INCLUDES) {
 
 /***/ }),
 
+/***/ "c5f6":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var global = __webpack_require__("7726");
+var has = __webpack_require__("69a8");
+var cof = __webpack_require__("2d95");
+var inheritIfRequired = __webpack_require__("5dbc");
+var toPrimitive = __webpack_require__("6a99");
+var fails = __webpack_require__("79e5");
+var gOPN = __webpack_require__("9093").f;
+var gOPD = __webpack_require__("11e9").f;
+var dP = __webpack_require__("86cc").f;
+var $trim = __webpack_require__("aa77").trim;
+var NUMBER = 'Number';
+var $Number = global[NUMBER];
+var Base = $Number;
+var proto = $Number.prototype;
+// Opera ~12 has broken Object#toString
+var BROKEN_COF = cof(__webpack_require__("2aeb")(proto)) == NUMBER;
+var TRIM = 'trim' in String.prototype;
+
+// 7.1.3 ToNumber(argument)
+var toNumber = function (argument) {
+  var it = toPrimitive(argument, false);
+  if (typeof it == 'string' && it.length > 2) {
+    it = TRIM ? it.trim() : $trim(it, 3);
+    var first = it.charCodeAt(0);
+    var third, radix, maxCode;
+    if (first === 43 || first === 45) {
+      third = it.charCodeAt(2);
+      if (third === 88 || third === 120) return NaN; // Number('+0x1') should be NaN, old V8 fix
+    } else if (first === 48) {
+      switch (it.charCodeAt(1)) {
+        case 66: case 98: radix = 2; maxCode = 49; break; // fast equal /^0b[01]+$/i
+        case 79: case 111: radix = 8; maxCode = 55; break; // fast equal /^0o[0-7]+$/i
+        default: return +it;
+      }
+      for (var digits = it.slice(2), i = 0, l = digits.length, code; i < l; i++) {
+        code = digits.charCodeAt(i);
+        // parseInt parses a string to a first unavailable symbol
+        // but ToNumber should return NaN if a string contains unavailable symbols
+        if (code < 48 || code > maxCode) return NaN;
+      } return parseInt(digits, radix);
+    }
+  } return +it;
+};
+
+if (!$Number(' 0o1') || !$Number('0b1') || $Number('+0x1')) {
+  $Number = function Number(value) {
+    var it = arguments.length < 1 ? 0 : value;
+    var that = this;
+    return that instanceof $Number
+      // check on 1..constructor(foo) case
+      && (BROKEN_COF ? fails(function () { proto.valueOf.call(that); }) : cof(that) != NUMBER)
+        ? inheritIfRequired(new Base(toNumber(it)), that, $Number) : toNumber(it);
+  };
+  for (var keys = __webpack_require__("9e1e") ? gOPN(Base) : (
+    // ES3:
+    'MAX_VALUE,MIN_VALUE,NaN,NEGATIVE_INFINITY,POSITIVE_INFINITY,' +
+    // ES6 (in case, if modules with ES6 Number statics required before):
+    'EPSILON,isFinite,isInteger,isNaN,isSafeInteger,MAX_SAFE_INTEGER,' +
+    'MIN_SAFE_INTEGER,parseFloat,parseInt,isInteger'
+  ).split(','), j = 0, key; keys.length > j; j++) {
+    if (has(Base, key = keys[j]) && !has($Number, key)) {
+      dP($Number, key, gOPD(Base, key));
+    }
+  }
+  $Number.prototype = proto;
+  proto.constructor = $Number;
+  __webpack_require__("2aba")(global, NUMBER, $Number);
+}
+
+
+/***/ }),
+
 /***/ "c69a":
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = !__webpack_require__("9e1e") && !__webpack_require__("79e5")(function () {
   return Object.defineProperty(__webpack_require__("230e")('div'), 'a', { get: function () { return 7; } }).a != 7;
 });
+
+
+/***/ }),
+
+/***/ "c8ba":
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
 
 
 /***/ }),
@@ -2496,6 +3985,39 @@ module.exports = function (done, value) {
 
 /***/ }),
 
+/***/ "d75a":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return install; });
+/* harmony import */ var _canvas_poster__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("6ecc");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _canvas_poster__WEBPACK_IMPORTED_MODULE_0__["a"]; });
+
+
+function install(Vue) {
+  Vue.component('vue-canvas-poster', _canvas_poster__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"]);
+}
+
+var myPlugin = {
+  install: install
+};
+/* harmony default export */ __webpack_exports__["a"] = (myPlugin); // Auto-install
+
+var GlobalVue = null;
+
+if (typeof window !== 'undefined') {
+  GlobalVue = window.Vue;
+} else if (typeof global !== 'undefined') {
+  GlobalVue = global.Vue;
+}
+
+if (GlobalVue) {
+  GlobalVue.use(myPlugin);
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("c8ba")))
+
+/***/ }),
+
 /***/ "d864":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2519,21 +4041,6 @@ module.exports = function (fn, that, length) {
     return fn.apply(that, arguments);
   };
 };
-
-
-/***/ }),
-
-/***/ "d8a2":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("2350")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".canvas[data-v-7f4b0a31]{position:fixed;top:2000px}", ""]);
-
-// exports
 
 
 /***/ }),
@@ -2652,6 +4159,21 @@ module.exports = function (object, index, value) {
 
 /***/ }),
 
+/***/ "f536":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("4d7e");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("133b3f3f", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
 /***/ "f605":
 /***/ (function(module, exports) {
 
@@ -2748,543 +4270,34 @@ if (typeof window !== 'undefined') {
     __webpack_require__("f6fd")
   }
 
-  var setPublicPath_i
-  if ((setPublicPath_i = window.document.currentScript) && (setPublicPath_i = setPublicPath_i.src.match(/(.+\/)[^/]+\.js(\?.*)?$/))) {
-    __webpack_require__.p = setPublicPath_i[1] // eslint-disable-line
+  var i
+  if ((i = window.document.currentScript) && (i = i.src.match(/(.+\/)[^/]+\.js(\?.*)?$/))) {
+    __webpack_require__.p = i[1] // eslint-disable-line
   }
 }
 
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"35b68e96-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/lib/canvas-poster.vue?vue&type=template&id=7f4b0a31&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('canvas',{ref:"canvas",staticClass:"canvas",attrs:{"width":_vm.width,"height":_vm.height}})])}
-var staticRenderFns = []
+// EXTERNAL MODULE: ./src/lib/index.js
+var lib = __webpack_require__("d75a");
 
-
-// CONCATENATED MODULE: ./src/lib/canvas-poster.vue?vue&type=template&id=7f4b0a31&scoped=true&
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es7.object.get-own-property-descriptors.js
-var es7_object_get_own_property_descriptors = __webpack_require__("8e6e");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.object.keys.js
-var es6_object_keys = __webpack_require__("456d");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.fill.js
-var es6_array_fill = __webpack_require__("6c7b");
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js
-var define_property = __webpack_require__("85f2");
-var define_property_default = /*#__PURE__*/__webpack_require__.n(define_property);
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    define_property_default()(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-// EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom.iterable.js
-var web_dom_iterable = __webpack_require__("ac6a");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.iterator.js
-var es6_array_iterator = __webpack_require__("cadf");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.string.iterator.js
-var es6_string_iterator = __webpack_require__("5df3");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.promise.js
-var es6_promise = __webpack_require__("551c");
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/lib/canvas-poster.vue?vue&type=script&lang=js&
-
-
-
-
-
-
-
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-//
-//
-//
-//
-//
-/* harmony default export */ var canvas_postervue_type_script_lang_js_ = ({
-  name: 'CanvasPoster',
-  components: {},
-  props: {
-    painting: {
-      type: Object,
-      value: {}
-    }
-  },
-  computed: {},
-  watch: {
-    painting: {
-      handler: 'handlePaint',
-      deep: true,
-      immediate: true
-    }
-  },
-  data: function data() {
-    return {
-      showCanvas: false,
-      width: 100,
-      height: 100,
-      imageList: [],
-      isPainting: false,
-      canvas: null,
-      ctx: null
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    this.$nextTick(function () {
-      _this.canvas = _this.$refs.canvas; // 指定canvas
-
-      _this.ctx = _this.canvas.getContext("2d"); //设置2D渲染区域
-    });
-  },
-  methods: {
-    // 开始绘图
-    handlePaint: function handlePaint(newVal, oldVal) {
-      var _this2 = this;
-
-      var _this$painting = this.painting,
-          width = _this$painting.width,
-          height = _this$painting.height,
-          views = _this$painting.views;
-      this.width = width;
-      this.height = height;
-      var inter = setInterval(function () {
-        if (_this2.ctx) {
-          clearInterval(inter); // 重新绘图
-
-          _this2.ctx.clearRect(0, 0, _this2.canvas.width, _this2.canvas.height);
-
-          _this2.ctx.save();
-
-          _this2.getImages(views);
-        }
-      }, 100);
-    },
-    //加载图片
-    loadImage: function loadImage(url) {
-      return new Promise(function (resolve, reject) {
-        var img = new Image();
-        img.setAttribute('crossorigin', 'anonymous');
-
-        img.onload = function () {
-          return resolve(img);
-        };
-
-        img.onerror = function () {
-          return reject("\u4E0B\u8F7D\u56FE\u7247\u5931\u8D25 ".concat(url));
-        };
-
-        img.src = url;
-      });
-    },
-    // 加载图片
-    getImages: function getImages(views) {
-      var _this3 = this;
-
-      var imageList = [];
-
-      for (var i = 0; i < views.length; i++) {
-        if (views[i].type === 'image') {
-          imageList.push(this.loadImage(views[i].url));
-        }
-      }
-
-      Promise.all(imageList).then(function (res) {
-        _this3.imageList = res;
-
-        _this3.startPainting();
-      });
-    },
-    startPainting: function startPainting() {
-      var views = this.painting.views;
-
-      for (var i = 0, imageIndex = 0; i < views.length; i++) {
-        if (views[i].type === 'image') {
-          this.drawImage(_objectSpread({}, views[i], {
-            img: this.imageList[imageIndex]
-          }));
-          imageIndex++;
-        } else if (views[i].type === 'text') {
-          this.drawText(views[i]);
-        } else if (views[i].type === 'rect') {
-          this.drawRect(views[i]);
-        }
-      }
-
-      var imageBase64 = this.canvas.toDataURL("image/png");
-      this.$emit('success', imageBase64);
-    },
-    drawImage: function drawImage(params) {
-      this.ctx.save();
-      var img = params.img,
-          _params$top = params.top,
-          top = _params$top === void 0 ? 0 : _params$top,
-          _params$left = params.left,
-          left = _params$left === void 0 ? 0 : _params$left,
-          _params$width = params.width,
-          width = _params$width === void 0 ? 0 : _params$width,
-          _params$height = params.height,
-          height = _params$height === void 0 ? 0 : _params$height,
-          _params$borderRadius = params.borderRadius,
-          borderRadius = _params$borderRadius === void 0 ? 0 : _params$borderRadius,
-          _params$deg = params.deg,
-          deg = _params$deg === void 0 ? 0 : _params$deg; // if (borderRadius) {
-      //   this.ctx.beginPath()
-      //   this.ctx.arc(left + borderRadius, top + borderRadius, borderRadius, 0, 2 * Math.PI)
-      //   this.ctx.clip()
-      //   this.ctx.drawImage(img, left, top, width, height)
-      // } else {
-
-      if (deg !== 0) {
-        this.ctx.translate(left + width / 2, top + height / 2);
-        this.ctx.rotate(deg * Math.PI / 180);
-        this.ctx.drawImage(img, -width / 2, -height / 2, width, height);
-      } else {
-        this.ctx.drawImage(img, left, top, width, height);
-      } //   }
-
-
-      this.ctx.restore();
-    },
-    // 写字
-    drawText: function drawText(params) {
-      this.ctx.save();
-      var _params$MaxLineNumber = params.MaxLineNumber,
-          MaxLineNumber = _params$MaxLineNumber === void 0 ? 2 : _params$MaxLineNumber,
-          _params$breakWord = params.breakWord,
-          breakWord = _params$breakWord === void 0 ? false : _params$breakWord,
-          _params$color = params.color,
-          color = _params$color === void 0 ? 'black' : _params$color,
-          _params$content = params.content,
-          content = _params$content === void 0 ? '' : _params$content,
-          _params$fontSize = params.fontSize,
-          fontSize = _params$fontSize === void 0 ? 16 : _params$fontSize,
-          _params$top2 = params.top,
-          top = _params$top2 === void 0 ? 0 : _params$top2,
-          _params$left2 = params.left,
-          left = _params$left2 === void 0 ? 0 : _params$left2,
-          _params$lineHeight = params.lineHeight,
-          lineHeight = _params$lineHeight === void 0 ? 20 : _params$lineHeight,
-          _params$textAlign = params.textAlign,
-          textAlign = _params$textAlign === void 0 ? 'left' : _params$textAlign,
-          width = params.width,
-          _params$bolder = params.bolder,
-          bolder = _params$bolder === void 0 ? false : _params$bolder,
-          _params$textDecoratio = params.textDecoration,
-          textDecoration = _params$textDecoratio === void 0 ? 'none' : _params$textDecoratio;
-      this.ctx.beginPath();
-      this.ctx.textBaseline = 'top';
-      this.ctx.textAlign = textAlign;
-      this.ctx.fillStyle = color; //  this.ctx.font = "normal 36px Arial";
-
-      this.ctx.font = "normal ".concat(fontSize, "px");
-
-      if (!breakWord) {
-        this.ctx.fillText(content, left, top);
-        this.drawTextLine(left, top, textDecoration, color, fontSize, content);
-      } else {
-        var fillText = '';
-        var fillTop = top;
-        var lineNum = 1;
-
-        for (var i = 0; i < content.length; i++) {
-          fillText += [content[i]];
-
-          if (this.ctx.measureText(fillText).width > width) {
-            if (lineNum === MaxLineNumber) {
-              if (i !== content.length) {
-                fillText = fillText.substring(0, fillText.length - 1) + '...';
-                this.ctx.fillText(fillText, left, fillTop);
-                this.drawTextLine(left, fillTop, textDecoration, color, fontSize, fillText);
-                fillText = '';
-                break;
-              }
-            }
-
-            this.ctx.fillText(fillText, left, fillTop);
-            this.drawTextLine(left, fillTop, textDecoration, color, fontSize, fillText);
-            fillText = '';
-            fillTop += lineHeight;
-            lineNum++;
-          }
-        }
-
-        this.ctx.fillText(fillText, left, fillTop);
-        this.drawTextLine(left, fillTop, textDecoration, color, fontSize, fillText);
-      }
-
-      this.ctx.restore();
-
-      if (bolder) {
-        this.drawText(_objectSpread({}, params, {
-          left: left + 0.3,
-          top: top + 0.3,
-          bolder: false,
-          textDecoration: 'none'
-        }));
-      }
-    },
-    // 画直线
-    drawTextLine: function drawTextLine(left, top, textDecoration, color, fontSize, content) {
-      if (textDecoration === 'underline') {
-        this.drawRect({
-          background: color,
-          top: top + fontSize * 1.2,
-          left: left - 1,
-          width: this.ctx.measureText(content).width + 3,
-          height: 1
-        });
-      } else if (textDecoration === 'line-through') {
-        this.drawRect({
-          background: color,
-          top: top + fontSize * 0.4,
-          left: left - 1,
-          width: this.ctx.measureText(content).width + 3,
-          height: 1
-        });
-      }
-    },
-    // 画矩形
-    drawRect: function drawRect(params) {
-      this.ctx.save();
-      var background = params.background,
-          _params$top3 = params.top,
-          top = _params$top3 === void 0 ? 0 : _params$top3,
-          _params$left3 = params.left,
-          left = _params$left3 === void 0 ? 0 : _params$left3,
-          _params$width2 = params.width,
-          width = _params$width2 === void 0 ? 0 : _params$width2,
-          _params$height2 = params.height,
-          height = _params$height2 === void 0 ? 0 : _params$height2,
-          _params$radius = params.radius,
-          radius = _params$radius === void 0 ? 0 : _params$radius;
-      this.ctx.fillStyle = background;
-
-      if (radius) {
-        // 开始绘制 
-        this.ctx.beginPath(); // 左上角 
-
-        this.ctx.arc(left + radius, top + radius, radius, Math.PI, Math.PI * 1.5); // border-top
-
-        this.ctx.moveTo(left + radius, top);
-        this.ctx.lineTo(left + width - radius, top);
-        this.ctx.lineTo(left + width, top + radius); // 右上角
-
-        this.ctx.arc(left + width - radius, top + radius, radius, Math.PI * 1.5, Math.PI * 2); // border-right 
-
-        this.ctx.lineTo(left + width, top + height - radius);
-        this.ctx.lineTo(left + width - radius, top + height); // 右下角 
-
-        this.ctx.arc(left + width - radius, top + height - radius, radius, 0, Math.PI * 0.5); // border-bottom
-
-        this.ctx.lineTo(left + radius, top + height);
-        this.ctx.lineTo(left, top + height - radius); // 左下角 
-
-        this.ctx.arc(left + radius, top + height - radius, radius, Math.PI * 0.5, Math.PI); // border-left
-
-        this.ctx.lineTo(left, top + radius);
-        this.ctx.lineTo(left + radius, top); // 这里是使用 fill 还是 stroke都可以，二选一即可，但是需要与上面对应
-
-        this.ctx.fill();
-        this.ctx.closePath();
-      } else {
-        this.ctx.fillRect(left, top, width, height);
-      }
-
-      this.ctx.restore();
-    },
-    saveImageToLocal: function saveImageToLocal() {
-      var _this4 = this;
-
-      var _this$data = this.data,
-          width = _this$data.width,
-          height = _this$data.height;
-      wx.canvasToTempFilePath({
-        x: 0,
-        y: 0,
-        width: width,
-        height: height,
-        canvasId: 'canvasdrawer',
-        complete: function complete(res) {
-          if (res.errMsg === 'canvasToTempFilePath:ok') {
-            _this4.setData({
-              showCanvas: false,
-              isPainting: false,
-              tempFileList: []
-            });
-
-            _this4.triggerEvent('getImage', {
-              tempFilePath: res.tempFilePath,
-              errMsg: 'canvasdrawer:ok'
-            });
-          } else {
-            _this4.triggerEvent('getImage', {
-              errMsg: 'canvasdrawer:fail'
-            });
-          }
-        }
-      }, this);
-    }
-  }
-});
-// CONCATENATED MODULE: ./src/lib/canvas-poster.vue?vue&type=script&lang=js&
- /* harmony default export */ var lib_canvas_postervue_type_script_lang_js_ = (canvas_postervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/lib/canvas-poster.vue?vue&type=style&index=0&id=7f4b0a31&scoped=true&lang=css&
-var canvas_postervue_type_style_index_0_id_7f4b0a31_scoped_true_lang_css_ = __webpack_require__("3f17");
-
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-// CONCATENATED MODULE: ./src/lib/canvas-poster.vue
-
-
-
-
-
-
-/* normalize component */
-
-var component = normalizeComponent(
-  lib_canvas_postervue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  "7f4b0a31",
-  null
-  
-)
-
-/* harmony default export */ var canvas_poster = (component.exports);
-// CONCATENATED MODULE: ./src/lib/index.js
-
-var myPlugin = {
-  install: function install(Vue, options) {
-    Vue.component('canvas-poster', canvas_poster);
-  }
-};
-/* harmony default export */ var lib = (myPlugin);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
+/* concated harmony reexport install */__webpack_require__.d(__webpack_exports__, "install", function() { return lib["b" /* install */]; });
+/* concated harmony reexport vueCanvasPoster */__webpack_require__.d(__webpack_exports__, "vueCanvasPoster", function() { return lib["c" /* vueCanvasPoster */]; });
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (lib);
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (lib["a" /* default */]);
 
+
+
+/***/ }),
+
+/***/ "fdef":
+/***/ (function(module, exports) {
+
+module.exports = '\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003' +
+  '\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF';
 
 
 /***/ })

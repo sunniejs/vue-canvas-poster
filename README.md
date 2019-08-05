@@ -41,16 +41,20 @@ template
 ```
 
 ```javascript
+// 页面
 import { vueCanvasPoster } from 'vue-canvas-poster'
 
 components: {
   vueCanvasPoster
 }
 
-// or Global Install
+// 全局注册
 import Vue from 'vue'
-import vueCanvasPoster from 'vue-canvas-poster'
-Vue.use(vueCanvasPoster)
+import CanvasPoster from 'vue-canvas-poster'
+Vue.use(CanvasPoster)
+
+// 直接引入
+ script src='../src/lib/index.js'
 ```
 
 <details><summary>painting（点击展开）</summary><br>
@@ -284,7 +288,7 @@ Vue.use(vueCanvasPoster)
 
 ## 问题反馈
 
-有什么问题可以提 issue 或扫描微信二维码跟我联系
+有什么问题可以提 issue 或扫描微信二维码跟我联系，项目持续优化，加群获取最新更新消息
 
 [提 issue](https://github.com/sunnie1992/vue_canvas_poster/issues/new)
 
