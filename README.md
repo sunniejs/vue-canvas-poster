@@ -11,13 +11,7 @@ vue 组件-简单属性画 Canvas 图
 
 ## 生成效果
 
-开发中。。。
-
-<!-- <img width="300" src="https://github.com/jasondu/wxa-plugin-canvas/blob/master/demo.png"></img> -->
-
-## 组件原理说明文章
-
-开发中。。。
+<img width="300" src="https://github.com/sunnie1992/vue_canvas_poster/tree/master/examples/assets/demo.png"/>
 
 ## 安装
 
@@ -62,23 +56,24 @@ Vue.use(vueCanvasPoster)
 
 ### rect(矩形，线条) 字段
 
-| 字段名       | 类型   | 默认值 | 描述           |
-| ------------ | ------ | ------ | -------------- |
-| top          | Number |        | 距离顶部的距离 |
-| left         | Number |        | 距离左侧的距离 |
-| width        | Number | 0      | 宽度           |
-| height       | Number | 0      | 高度           |
-| background   | String | 否     | 背景颜色       |
-| borderRadius | Number | 否     | 圆角           |
+| 字段名     | 类型   | 默认值  | 描述                                |
+| ---------- | ------ | ------- | ----------------------------------- |
+| top        | Number | 0       | 距离顶部的距离                      |
+| left       | Number | 0       | 距离左侧的距离                      |
+| width      | Number | 0       | 宽度                                |
+| height     | Number | 0       | 高度                                |
+| background | String | 'white' | 背景颜色                            |
+| radius     | Number | 0       | 圆角                                |
+| deg        | Number | 0       | 旋转角度 (目前不能跟 radius 一起用) |
 
 ### text (文本) 字段
 
 | 字段名         | 类型    | 默认值 | 描述                                                        |
 | -------------- | ------- | ------ | ----------------------------------------------------------- |
-| top            | Number  | 是     | 距离顶部的距离                                              |
-| left           | Number  | 是     | 距离左侧的距离                                              |
+| top            | Number  | 0      | 距离顶部的距离                                              |
+| left           | Number  | 0      | 距离左侧的距离                                              |
 | content        | String  | ''     | 文本内容                                                    |
-| fontSize       | Number  | 是     | 文字大小                                                    |
+| fontSize       | Number  | 0      | 文字大小                                                    |
 | color          | String  | black  | 颜色                                                        |
 | lineHeight     | Number  | 20     | 行高，多行起作用                                            |
 | breakWord      | Boolean | false  | 换行                                                        |
@@ -89,13 +84,27 @@ Vue.use(vueCanvasPoster)
 
 ### image (图片) 字段
 
-| 字段   | 类型   | 必填 | 描述                                      |
-| ------ | ------ | ---- | ----------------------------------------- |
-| top    | Number | 是   | 距离顶部的距离                            |
-| left   | Number | 是   | 距离左侧的距离                            |
-| url    | String | 是   | 图片地址,也支持本地图片如：/images/1.jpeg |
-| width  | Number | 是   | 宽度                                      |
-| height | Number | 是   | 高度                                      |
+| 字段   | 类型   | 默认值 | 描述                                      |
+| ------ | ------ | ------ | ----------------------------------------- |
+| top    | Number | 0      | 距离顶部的距离                            |
+| left   | Number | 0      | 距离左侧的距离                            |
+| url    | String | ''     | 图片地址,也支持本地图片如：/images/1.jpeg |
+| width  | Number | 0      | 宽度                                      |
+| height | Number | 0      | 高度                                      |
+| radius | Number | 0      | 圆角                                      |
+| deg    | Number | 0      | 旋转角度 (目前不能跟 radius 一起用)       |
+
+### qrcode (二维码) 字段
+
+| 字段       | 类型   | 默认值 | 描述           |
+| ---------- | ------ | ------ | -------------- |
+| top        | Number | 0      | 距离顶部的距离 |
+| left       | Number | 0      | 距离左侧的距离 |
+| content    | String | ''     | 链接地址       |
+| width      | Number | 0      | 宽度           |
+| height     | Number | 0      | 高度           |
+| background | String | ''     | 背景色         |
+| color      | String | black  | 二维码颜色     |
 
 ## 事件
 

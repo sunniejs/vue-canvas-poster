@@ -13,60 +13,147 @@ export default {
     return {
       src: '',
       painting: {
-        width: 320,
-        height: 410,
+        width: 550,
+        height: 876,
         views: [
           {
             type: 'rect',
             top: 0,
             left: 0,
-            background: '#ffffff',
-            width: 320,
-            height: 320,
-            // radius: 160
+            background: '#f4f5f7',
+            width: 550,
+            height: 876
           },
           {
             type: 'image',
-            url: 'https://tgoods.top1buyer.com/res/testfile/imgs/20190702180744/MR9600-white/1.jpg',
-            left: 0,
-            top: 0,
-            width: 320,
-            height: 320,
-            deg: 90
+            url: 'https://tothers.top1buyer.com/wx.qlogo.cn/mmopen/vi_32/xiclf81ib8KrmcHw6pVW5ibHRh2DuibhaptzX9QpaSS2X0I7o8xIA8CEsD5Jw6icYnw9uxvxkGSzCWLSqYrVOwwSwSA/132',
+            left: 36,
+            top: 20,
+            width: 80,
+            height: 80,
+            radius: 40
           },
-
-
           {
             type: 'text',
-            content: 'breakWordbreakWordbreakWordbreakWordbreakWordbreakWordbreakWordbreakWordbreakWordbreakWordbreakWord',
-            fontSize: 15,
+            content: '乖摸摸头的小店',
+            fontSize: 26,
             bolder: true,
-            top: 12,
-            left: 12,
-            width: 270, // 大于270换行
+            top: 48,
+            left: 136,
+            width: 360,
             breakWord: true,
             MaxLineNumber: 1,
           },
           {
-            type: 'text',
-            content: `商品款号:1234商品款号:1234商品款号`,
-            fontSize: 15,
-            top: 40,
+            type: 'rect',
+            top: 120,
             left: 12,
-            width: 270, // 大于540换行
-            MaxLineNumber: 1,// 最多两行
-            textDecoration: 'underline'
+            background: '#FFFFFF',
+            width: 526,
+            height: 540,
+            radius: 10
+          },
+          // 本地图片
+          {
+            type: 'image',
+            url: require('./assets/1.jpg'),
+            left: 25,
+            top: 150,
+            width: 332,
+            height: 332,
+          },
+          // 网络图片
+          {
+            type: 'image',
+            url: 'https://tgoods.top1buyer.com/res/testfile/imgs/20190702180744/MR9600-Pink/2.jpg',
+            left: 364,
+            top: 150,
+            width: 160,
+            height: 160
+          },
+          {
+            type: 'image',
+            url: 'https://tgoods.top1buyer.com/res/testfile/imgs/20190702180744/MR9600-Pink/3.jpg',
+            left: 364,
+            top: 320,
+            width: 160,
+            height: 160
           },
           {
             type: 'text',
-            content: `尺码/规格:xs`,
-            fontSize: 12,
-            top: 100,
-            left: 12,
-            width: 270, // 大于540换行
-            MaxLineNumber: 1,// 最多两行
+            content: `18987、安奈儿童装上衣条纹童装上衣条纹童装上衣 条纹童装上衣`,
+            color: '#666666',
+            fontSize: 22,
+            top: 507,
+            left: 25,
+            width: 450,
+            lineHeight: 33,
+            MaxLineNumber: 2,
+            breakWord: true
+          },
+
+          {
+            type: 'text',
+            content: `劲爆价:`,
+            fontSize: 24,
+            top: 608,
+            left: 26,
+          },
+          {
+            type: 'text',
+            content: `¥39.00`,
+            color: '#E5463E',
+            fontSize: 36,
+            border: true,
+            top: 601,
+            left: 116
+          },
+          {
+            type: 'text',
+            content: `¥259.00`,
+            color: '#999999',
+            fontSize: 26,
+            border: true,
+            top: 609,
+            left: 243,
             textDecoration: 'line-through'
-          }
+          },
+          {
+            type: 'rect',
+            top: 647,
+            left: 439,
+            background: '#fff',
+            width: 28,
+            height: 28,
+            deg: 45
+          },
+          {
+            type: 'text',
+            content: `长按或扫描二维码`,
+            fontSize: 18,
+            color: '#999999',
+            top: 829,
+            left: 385
+          },
+          // 本地图片
+          {
+            type: 'image',
+            url: require('./assets/slogen.png'),
+            left: 26,
+            top: 821,
+            width: 218,
+            height: 24
+          },
+          {
+            type: 'qrcode',
+            content: 'https://github.com/sunnie1992/vue_canvas_poster',
+            background: '#fff',
+            color: '#000',
+            left: 392,
+            top: 690,
+            width: 130,
+            height: 130
+          },
         ]
       }
     }
@@ -82,7 +169,7 @@ export default {
 
 <style>
 .share-image {
-  width: 320px;
-  height: 410px;
+  width: 270px;
+  height: 438px;
 }
 </style>
