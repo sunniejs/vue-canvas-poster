@@ -44,18 +44,20 @@ export default {
   methods: {
     // 开始绘图
     handlePaint(newVal, oldVal) {
-      const { width, height, views } = this.painting
-      this.width = width
-      this.height = height
-      const inter = setInterval(() => {
-        if (this.ctx) {
-          clearInterval(inter)
-          // 重新绘图
-          this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-          this.ctx.save()
-          this.getImages(views)
-        }
-      }, 100)
+      if (newVal && newVal !== oldVal) {
+        const { width, height, views } = this.painting
+        this.width = width
+        this.height = height
+        const inter = setInterval(() => {
+          if (this.ctx) {
+            clearInterval(inter)
+            // 重新绘图
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+            this.ctx.save()
+            this.getImages(views)
+          }
+        }, 100)
+      }
     },
     //加载图片
     loadImage(url) {
@@ -155,7 +157,6 @@ export default {
     drawQRCode(params) {
       this.ctx.save()
       const { width = 0, height = 0, left = 0, top = 0, content, background, color } = params
-      console.log(width, height, content, background, color)
       QR.api.draw(content, this.ctx, left, top, width, height, background, color)
       this.ctx.restore()
     },

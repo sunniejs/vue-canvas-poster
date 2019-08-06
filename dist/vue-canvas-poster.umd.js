@@ -828,14 +828,18 @@ module.exports = function (Constructor, NAME, next) {
 
 /***/ }),
 
-/***/ "42d8":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "436a":
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_77bf6958_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("f536");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_77bf6958_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_77bf6958_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_77bf6958_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+exports = module.exports = __webpack_require__("2350")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".canvas[data-v-78a77da5]{position:fixed;top:2000px}", ""]);
+
+// exports
+
 
 /***/ }),
 
@@ -1208,21 +1212,6 @@ var defined = __webpack_require__("be13");
 module.exports = function (it) {
   return Object(defined(it));
 };
-
-
-/***/ }),
-
-/***/ "4d7e":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("2350")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".canvas[data-v-77bf6958]{position:fixed;top:2000px}", ""]);
-
-// exports
 
 
 /***/ }),
@@ -2609,12 +2598,12 @@ __webpack_require__("9c6c")('fill');
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"35b68e96-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/lib/canvas-poster.vue?vue&type=template&id=77bf6958&scoped=true&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"35b68e96-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/lib/canvas-poster.vue?vue&type=template&id=78a77da5&scoped=true&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('canvas',{ref:"canvas",staticClass:"canvas",attrs:{"width":_vm.width,"height":_vm.height}})])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/lib/canvas-poster.vue?vue&type=template&id=77bf6958&scoped=true&
+// CONCATENATED MODULE: ./src/lib/canvas-poster.vue?vue&type=template&id=78a77da5&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es7.object.get-own-property-descriptors.js
 var es7_object_get_own_property_descriptors = __webpack_require__("8e6e");
@@ -2724,23 +2713,25 @@ var QR = __webpack_require__("6cd3");
     handlePaint: function handlePaint(newVal, oldVal) {
       var _this2 = this;
 
-      var _this$painting = this.painting,
-          width = _this$painting.width,
-          height = _this$painting.height,
-          views = _this$painting.views;
-      this.width = width;
-      this.height = height;
-      var inter = setInterval(function () {
-        if (_this2.ctx) {
-          clearInterval(inter); // 重新绘图
+      if (newVal && newVal !== oldVal) {
+        var _this$painting = this.painting,
+            width = _this$painting.width,
+            height = _this$painting.height,
+            views = _this$painting.views;
+        this.width = width;
+        this.height = height;
+        var inter = setInterval(function () {
+          if (_this2.ctx) {
+            clearInterval(inter); // 重新绘图
 
-          _this2.ctx.clearRect(0, 0, _this2.canvas.width, _this2.canvas.height);
+            _this2.ctx.clearRect(0, 0, _this2.canvas.width, _this2.canvas.height);
 
-          _this2.ctx.save();
+            _this2.ctx.save();
 
-          _this2.getImages(views);
-        }
-      }, 100);
+            _this2.getImages(views);
+          }
+        }, 100);
+      }
     },
     //加载图片
     loadImage: function loadImage(url) {
@@ -2879,7 +2870,6 @@ var QR = __webpack_require__("6cd3");
           content = params.content,
           background = params.background,
           color = params.color;
-      console.log(width, height, content, background, color);
       QR.api.draw(content, this.ctx, left, top, width, height, background, color);
       this.ctx.restore();
     },
@@ -3022,8 +3012,8 @@ var QR = __webpack_require__("6cd3");
 });
 // CONCATENATED MODULE: ./src/lib/canvas-poster.vue?vue&type=script&lang=js&
  /* harmony default export */ var lib_canvas_postervue_type_script_lang_js_ = (canvas_postervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/lib/canvas-poster.vue?vue&type=style&index=0&id=77bf6958&scoped=true&lang=css&
-var canvas_postervue_type_style_index_0_id_77bf6958_scoped_true_lang_css_ = __webpack_require__("42d8");
+// EXTERNAL MODULE: ./src/lib/canvas-poster.vue?vue&type=style&index=0&id=78a77da5&scoped=true&lang=css&
+var canvas_postervue_type_style_index_0_id_78a77da5_scoped_true_lang_css_ = __webpack_require__("7f28");
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
@@ -3135,7 +3125,7 @@ var component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "77bf6958",
+  "78a77da5",
   null
   
 )
@@ -3238,6 +3228,17 @@ module.exports = function (it, tag, stat) {
   if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
 };
 
+
+/***/ }),
+
+/***/ "7f28":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_78a77da5_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("99ad");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_78a77da5_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_78a77da5_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_78a77da5_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -3464,6 +3465,21 @@ module.exports = Reflect && Reflect.ownKeys || function ownKeys(it) {
   return getSymbols ? keys.concat(getSymbols(it)) : keys;
 };
 
+
+/***/ }),
+
+/***/ "99ad":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("436a");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("4c7055cd", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -4156,21 +4172,6 @@ module.exports = function (object, index, value) {
   else object[index] = value;
 };
 
-
-/***/ }),
-
-/***/ "f536":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("4d7e");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("133b3f3f", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 

@@ -1,6 +1,6 @@
 {
   "name": "vue-canvas-poster",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "A lightweight vue components use canvas draw image by css properties.(一个通过css属性画canvas图片的轻量级的vue组件)",
   "author": "Sunnie <s406803045@163.com>",
   "license": "MIT",
@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/sunnie1992/vue_canvas_poster#readme",
   "keywords": [
-    "canvas",
+    "vue canvas",
+    "canvas image",
     "poster",
     "wechat"
   ],
