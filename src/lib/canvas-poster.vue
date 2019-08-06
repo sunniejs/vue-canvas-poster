@@ -44,7 +44,7 @@ export default {
   methods: {
     // 开始绘图
     handlePaint(newVal, oldVal) {
-      if (newVal && newVal !== oldVal) {
+      if (newVal.views && newVal !== oldVal) {
         const { width, height, views } = this.painting
         this.width = width
         this.height = height
