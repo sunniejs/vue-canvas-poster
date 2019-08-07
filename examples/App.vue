@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img :src="src" alt="" class="share-image">
-    <vue-canvas-poster class="poster" :painting="painting" @success="success"></vue-canvas-poster>
+    <vue-canvas-poster class="poster" :painting="painting" @success="success" @fail="fail"></vue-canvas-poster>
   </div>
 </template>
 <script>
@@ -163,6 +163,9 @@ export default {
     success(src) {
       this.src = src
     },
+    fail(err) {
+      console.log('fail', err)
+    }
   }
 }
 </script>

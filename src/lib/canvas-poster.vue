@@ -80,6 +80,8 @@ export default {
       Promise.all(imageList).then(res => {
         this.imageList = res
         this.startPainting()
+      }).catch((err) => {
+        this.$emit('fail', err)
       })
     },
     startPainting() {
