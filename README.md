@@ -286,6 +286,16 @@ Vue.use(CanvasPoster)
   }
 ```
 
+### fail
+
+返回失败信息
+
+```javascript
+ fail(err) {
+      console.log('fail', err)
+    }
+```
+
 ## 问题反馈
 
 有什么问题可以提 issue 或扫描微信二维码跟我联系，项目持续优化，加群获取最新更新消息

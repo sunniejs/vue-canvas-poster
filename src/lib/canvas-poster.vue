@@ -240,7 +240,7 @@ export default {
       } else if (textDecoration === 'line-through') {
         this.drawRect({
           background: color,
-          top: top + fontSize * 0.4,
+          top: top + fontSize * 0.6,
           left: left - 1,
           width: this.ctx.measureText(content).width + 3,
           height: 1
