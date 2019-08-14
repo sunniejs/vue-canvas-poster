@@ -20,6 +20,12 @@ vue 组件-简单属性画 Canvas 图
 
 <img width="300" src="https://image-static.segmentfault.com/368/423/3684237441-5d47dc1cebb1f_articlex"/>
 
+## 线上体验
+
+<img width="300" src="https://image-static.segmentfault.com/383/306/3833065354-5d50c367301c3_articlex"/>
+
+
+
 ## 安装
 
 #### 通过 npm 安装
