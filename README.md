@@ -20,6 +20,10 @@ vue 组件-简单属性画 Canvas 图
 
 <img width="300" src="https://image-static.segmentfault.com/368/423/3684237441-5d47dc1cebb1f_articlex"/>
 
+## 扫码体验上线效果
+
+<img width="300" src="https://image-static.segmentfault.com/383/306/3833065354-5d50c367301c3_articlex"/>
+
 ## 安装
 
 #### 通过 npm 安装
@@ -233,19 +237,20 @@ Vue.use(CanvasPoster)
 
 ### text (文本) 字段
 
-| 字段名         | 类型    | 默认值 | 描述                                                        |
-| -------------- | ------- | ------ | ----------------------------------------------------------- |
-| top            | Number  | 0      | 距离顶部的距离                                              |
-| left           | Number  | 0      | 距离左侧的距离                                              |
-| content        | String  | ''     | 文本内容                                                    |
-| fontSize       | Number  | 0      | 文字大小                                                    |
-| color          | String  | black  | 颜色                                                        |
-| lineHeight     | Number  | 20     | 行高，多行起作用                                            |
-| breakWord      | Boolean | false  | 换行                                                        |
-| MaxLineNumber  | Int     | 2      | 根据宽度换行 ,需要设置 breakWord: true ,超出行隐藏显示为... |
-| width          | Number  |        | 文本宽度                                                    |
-| bolder         | String  | false  | 加粗                                                        |
-| textDecoration | String  | none   | underline(下划线)、line-through(贯穿线)                     |
+| 字段名         | 类型    | 默认值 | 描述                                                                             |
+| -------------- | ------- | ------ | -------------------------------------------------------------------------------- |
+| top            | Number  | 0      | 距离顶部的距离                                                                   |
+| left           | Number  | 0      | 距离左侧的距离                                                                   |
+| content        | String  | ''     | 文本内容                                                                         |
+| fontSize       | Number  | 0      | 文字大小                                                                         |
+| color          | String  | black  | 颜色                                                                             |
+| textAlign      | String  | 'left' | 字体居中需要设置 left 值。比如：图片宽度 100,left:50,textAlign:'center' 即可居中 |
+| lineHeight     | Number  | 20     | 行高，多行起作用                                                                 |
+| breakWord      | Boolean | false  | 换行                                                                             |
+| MaxLineNumber  | Int     | 2      | 根据宽度换行 ,需要设置 breakWord: true ,超出行隐藏显示为...                      |
+| width          | Number  |        | 文本宽度                                                                         |
+| bolder         | String  | false  | 加粗                                                                             |
+| textDecoration | String  | none   | underline(下划线)、line-through(贯穿线)                                          |
 
 ### image (图片) 字段
 

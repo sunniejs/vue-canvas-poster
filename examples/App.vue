@@ -39,8 +39,9 @@ export default {
             fontSize: 26,
             bolder: true,
             top: 48,
-            left: 136,
-            width: 360,
+            textAlign: 'center',
+            left: 275, // 图片宽度一半，居中需要设置
+            width: 300, // 设置字体最大宽度
             breakWord: true,
             MaxLineNumber: 1,
           },
@@ -73,7 +74,7 @@ export default {
           },
           {
             type: 'image',
-            url: 'https://tgoods.top1buyer.com/res/testfile/imgs/20190702180744/MR9600-Pink/3.jpg',
+            url: 'https://pic2.zhimg.com/v2-7f2a92f872a846897792af75801117b3_1200x500.jpg',
             left: 364,
             top: 320,
             width: 160,
