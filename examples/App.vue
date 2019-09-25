@@ -175,8 +175,7 @@ export default {
 
 <style>
 .share-image {
-  border: 1px solid red;
-  /* width: 270px;
-  height: 438px; */
+  width: 270px;
+  height: 438px;
 }
 </style>
