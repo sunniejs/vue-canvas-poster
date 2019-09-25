@@ -182,17 +182,20 @@ export default {
       } = params
 
       this.ctx.beginPath()
-      this.ctx.textBaseline = 'top'
+      // this.ctx.textBaseline = 'top'
+      this.ctx.textBaseline = "Bottom"
       this.ctx.textAlign = textAlign
       this.ctx.fillStyle = color
       //  this.ctx.font = "normal 36px Arial";
       this.ctx.font = `normal ${fontSize}px Arial`;
+      //  top + fontSize  解决 this.ctx.textBaseline = 'top'问题
+      const textTop = top + fontSize
       if (!breakWord) {
-        this.ctx.fillText(content, left, top)
-        this.drawTextLine(left, top, textDecoration, color, fontSize, content)
+        this.ctx.fillText(content, left, textTop)
+        this.drawTextLine(left, textTop, textDecoration, color, fontSize, content)
       } else {
         let fillText = ''
-        let fillTop = top
+        let fillTop = textTop
         let lineNum = 1
         for (let i = 0; i < content.length; i++) {
           fillText += [content[i]]
@@ -232,7 +235,7 @@ export default {
       if (textDecoration === 'underline') {
         this.drawRect({
           background: color,
-          top: top + fontSize * 1.2,
+          top: top,
           left: left - 1,
           width: this.ctx.measureText(content).width + 3,
           height: 1
@@ -240,11 +243,12 @@ export default {
       } else if (textDecoration === 'line-through') {
         this.drawRect({
           background: color,
-          top: top + fontSize * 0.6,
+          top: top - fontSize / 3,
           left: left - 1,
           width: this.ctx.measureText(content).width + 3,
           height: 1
         })
+
       }
     },
     _getAngle(angle) {

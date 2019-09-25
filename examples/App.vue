@@ -15,6 +15,7 @@ export default {
       painting: {
         width: 550,
         height: 876,
+
         views: [
           {
             type: 'rect',
@@ -107,7 +108,8 @@ export default {
             fontSize: 36,
             border: true,
             top: 601,
-            left: 116
+            left: 116,
+            textDecoration: 'underline'
           },
           {
             type: 'text',
@@ -173,7 +175,8 @@ export default {
 
 <style>
 .share-image {
-  width: 270px;
-  height: 438px;
+  border: 1px solid red;
+  /* width: 270px;
+  height: 438px; */
 }
 </style>
