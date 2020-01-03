@@ -1,5 +1,4 @@
 /* eslint-disable */
-!(function () {
 
   // alignment pattern
   var adelta = [
@@ -698,7 +697,7 @@
 
   var _canvas = null;
 
-  var api = {
+  export const api = {
 
     get ecclevel() {
       return ecclevel;
@@ -778,7 +777,5 @@
       }
     }
   }
-  module.exports = { api }
-  // exports.draw = api;
 
-})();
+ 
