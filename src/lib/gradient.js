@@ -1,8 +1,4 @@
 /* eslint-disable */
-// 当ctx传入当前文件，const grd = ctx.createCircularGradient() 和
-// const grd = this.ctx.createLinearGradient() 无效，因此只能分开处理
-// 先分析，在外部创建grd，再传入使用就可以
-
 export const api = {
   isGradient: function(bg) {
       if (bg && (bg.startsWith('linear') || bg.startsWith('radial'))) {

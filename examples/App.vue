@@ -18,7 +18,7 @@ export default {
   },
   mounted(){
     const params={
-      type:'text'
+      type:'pro' // 尝试换一下base,image
     }
     drawPoster(params).then(res=>{
         this.painting = res
