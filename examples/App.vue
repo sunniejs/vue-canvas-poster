@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img :src="src" alt="" class="share-image">
-    <vue-canvas-poster class="poster"  :widthPixels="1000" :painting="painting" @success="success" @fail="fail"></vue-canvas-poster>
+    <vue-canvas-poster  class="poster"  :widthPixels="1000" :painting="painting" @success="success" @fail="fail"></vue-canvas-poster>
   </div>
 </template>
 <script>
@@ -18,7 +18,7 @@ export default {
   },
   mounted(){
     const params={
-      type:'home'
+      type:'text'
     }
     drawPoster(params).then(res=>{
         this.painting = res
@@ -45,7 +45,7 @@ export default {
   text-align: center;
 }
 .share-image {
-  width: 270px;
-  height: 438px;
+  width: 100%;
+  height: auto;
 }
 </style>

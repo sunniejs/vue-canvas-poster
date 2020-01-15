@@ -1,15 +1,19 @@
 // 海报图
 export function drawPoster(data) {
   return new Promise(function(resolve, reject) {
-      switch (data.shareType) {
-          case "home":
-              resolve(drawHomePoster(data));
+      switch (data.type) {
+          case "base":
+           resolve(drawBasePoster(data));
+            break;
+          case "image":
+            resolve(drawImgPoster(data));
+            break;
           default:
-              resolve(drawHomePoster(data));
+          resolve(drawBasePoster(data));
       }
   });
 }
-function drawHomePoster() {
+function drawBasePoster() {
   return {
     width: '654px',
     height: '1000px',
@@ -122,7 +126,7 @@ function drawHomePoster() {
         css: {
           bottom: '40px',
           right: '40px',
-          color: 'radial-gradient(white 15%, red 60%)',
+          color: 'radial-gradient(rgba(0, 0, 0, 0) 5%, #0ff 15%, #f0f 60%)',
           borderRadius: '20px',
           borderWidth: '10px',
           width: '120px',
@@ -139,9 +143,11 @@ function drawHomePoster() {
           borderWidth: '2px',
         },
       },
+     
     ],
   };
 }
+
 const startTop = 50;
 const startLeft = 20;
 const gapSize = 70;
@@ -197,4 +203,82 @@ function _des(index, content) {
   return des;
 }
  
+function drawImgPoster() {
+  return {
+    width: '654px',
+    height: '1140px',
+    background: '#eee',
+    views: [
+      {
+        type: 'image',
+        url: require('./assets/avatar.jpg'),
+      },
+      {
+        type: 'text',
+        text: '未设置height、width时',
+        css: {
+          right: '0px',
+          top: '60px',
+          fontSize: '30px',
+        },
+      },
+      {
+        type: 'image',
+        url: require('./assets/avatar.jpg'),
+        css: {
+          width: '200px',
+          height: '200px',
+          top: '430px',
+        },
+      },
+      {
+        type: 'text',
+        text: "mode: 'aspectFill' 或 无",
+        css: {
+          left: '210px',
+          fontSize: '30px',
+          top: '490px',
+        },
+      },
+      {
+        type: 'image',
+        url: require('./assets/avatar.jpg'),
+        css: {
+          width: '200px',
+          height: '200px',
+          mode: 'scaleToFill',
+          top: '650px',
+        },
+      },
+      {
+        type: 'text',
+        text: "mode: 'scaleToFill'",
+        css: {
+          left: '210px',
+          top: '710px',
+          fontSize: '30px',
+        },
+      },
+      {
+        type: 'image',
+        url: require('./assets/avatar.jpg'),
+        css: {
+          width: '200px',
+          height: 'auto',
+          top: '870px',
+        },
+      },
+      {
+        type: 'text',
+        text: '设置height为auto',
+        css: {
+          left: '210px',
+          top: '930px',
+          fontSize: '30px',
+        },
+      },
 
+    ],
+  };
+}
+ 

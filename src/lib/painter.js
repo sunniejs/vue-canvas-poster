@@ -17,9 +17,7 @@ export default class Painter {
         for (const view of this.data.views) {
             this._drawAbsolute(view)
         }
-        // this.ctx.draw(false, () => {
-        //   callback();
-        // });
+        callback();
     }
 
     _background() {
@@ -171,10 +169,6 @@ export default class Painter {
                 break
             }
             case 'image': {
-                // image的长宽设置成auto的逻辑处理
-                // const ratio = getApp().systemInfo.pixelRatio ? getApp().systemInfo.pixelRatio : 2;
-                const ratio = 1
-
                 // 有css却未设置width或height，则默认为auto
                 if (view.css) {
                     if (!view.css.width) {
@@ -184,10 +178,9 @@ export default class Painter {
                         view.css.height = 'auto'
                     }
                 }
-
                 if (!view.css || (view.css.width === 'auto' && view.css.height === 'auto')) {
-                    width = Math.round(view.sWidth / ratio)
-                    height = Math.round(view.sHeight / ratio)
+                    width = Math.round(view.sWidth  )
+                    height = Math.round(view.sHeight  )
                 } else if (view.css.width === 'auto') {
                     height = view.css.height.toPx()
                     width = (view.sWidth / view.sHeight) * height

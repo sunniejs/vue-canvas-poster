@@ -12,17 +12,27 @@ vue 组件-简单属性画 Canvas 图
 具有如下特性：
 
 - 绘制文本(换行、超出内容省略号、中划线、下划线、文本加粗)
-- 绘制图片(圆角、旋转)
-- 绘制矩形(圆角、旋转)
+- 绘制图片(圆角、旋转、边框)
+- 绘制矩形(圆角、旋转、边框)
 - 绘制二维码
+- 渐变
+
+## 升级说明
+
+V1.0.0 增加了很多特性，新老版本不兼容，请谨慎升级，老版本不在维护，如果你用的是老版本的请移步 [0.1.16]()
+
+### 运行例子
+
+git clone https://github.com/sunnie1992/vue_canvas_poster.git
+
+npm i
+
+npm run serve
 
 ## 生成效果
 
 <img width="300" src="https://image-static.segmentfault.com/368/423/3684237441-5d47dc1cebb1f_articlex"/>
-
-## 扫码体验上线效果
-
-<img width="300" src="https://image-static.segmentfault.com/383/306/3833065354-5d50c367301c3_articlex"/>
+ 
 
 ## 安装
 
@@ -41,7 +51,7 @@ npm i vue-canvas-poster --save
 template
 
 ```html
-<vue-canvas-poster :painting="painting" @success="success"></vue-canvas-poster>
+ <vue-canvas-poster  :widthPixels="1000" :painting="painting" @success="success" @fail="fail"></vue-canvas-poster>
 ```
 
 ```javascript
@@ -57,8 +67,7 @@ import Vue from 'vue'
 import CanvasPoster from 'vue-canvas-poster'
 Vue.use(CanvasPoster)
 
-// 直接引入
- script src='../src/lib/index.js'
+ 
 ```
 
 <details><summary>painting（点击展开）</summary><br>
