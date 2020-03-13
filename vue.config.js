@@ -1,5 +1,6 @@
 const port = 9018 // dev port
 module.exports = {
+  publicPath: './',
   devServer: {
     port: port,
     open: false,
