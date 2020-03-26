@@ -23,7 +23,7 @@ V1.0.0 增加了很多特性，新老版本不兼容，请谨慎升级，老版�
 
 ### 运行例子
 
-git clone https://github.com/sunnie1992/vue_canvas_poster.git
+git clone https://github.com/sunniejs/vue_canvas_poster.git
 
 npm i
 
