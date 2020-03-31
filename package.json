@@ -7,12 +7,12 @@
   "main": "./dist/vue-canvas-poster.umd.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sunnie1992/vue_canvas_poster"
+    "url": "https://github.com/sunniejs/vue_canvas_poster"
   },
   "bugs": {
-    "url": "https://github.com/sunnie1992/vue_canvas_poster/issues"
+    "url": "https://github.com/sunniejs/vue_canvas_poster/issues"
   },
-  "homepage": "https://github.com/sunnie1992/vue_canvas_poster#readme",
+  "homepage": "https://github.com/sunniejs/vue_canvas_poster#readme",
   "keywords": [
     "vue canvas",
     "canvas image",
