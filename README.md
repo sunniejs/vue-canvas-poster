@@ -19,7 +19,7 @@ vue 组件-简单属性画 Canvas 图
 
 ## 升级说明
 
-V1.0.0 增加了很多特性，新老版本不兼容，请谨慎升级，老版本不在维护，如果你用的是老版本的请移步 [0.1.16](https://github.com/sunnie1992/vue_canvas_poster/tree/0.1.16)
+V1.0.0 增加了很多特性，新老版本不兼容，请谨慎升级，老版本不在维护，如果你用的是老版本的请移步 [0.1.16](https://github.com/sunniejs/vue_canvas_poster/tree/0.1.16)
 
 ### 运行例子
 
@@ -31,7 +31,7 @@ npm run serve
 
 ## 生成效果
 
-<img width="300" src="https://github.com/sunnie1992/vue_canvas_poster/blob/master/examples/assets/demo.png"/>
+<img width="300" src="https://github.com/sunniejs/vue_canvas_poster/blob/master/examples/assets/demo.png"/>
  
 
 ## 安装
@@ -220,7 +220,7 @@ Vue.use(CanvasPoster)
             },
             {
               type: 'qrcode',
-              content: 'https://github.com/sunnie1992/vue_canvas_poster',
+              content: 'https://github.com/sunniejs/vue_canvas_poster',
               css: {
                   bottom: '50px',
                   right: '26px',
@@ -408,7 +408,7 @@ radial-gradient(rgba(0, 0, 0, 0) 5%, #0ff 15%, #f0f 60%)
 
 有什么问题可以提 issue 或扫描微信二维码跟我联系，项目持续优化，加群获取最新更新消息
 
-[提 issue](https://github.com/sunnie1992/vue_canvas_poster/issues/new)
+[提 issue](https://github.com/sunniejs/vue_canvas_poster/issues/new)
 
 ## 关于我
 

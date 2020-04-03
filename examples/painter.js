@@ -1,6 +1,6 @@
 // 海报图
 export function drawPoster(data) {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function(resolve) {
         switch (data.type) {
             case 'pro':
                 resolve(poster(data))
@@ -25,7 +25,7 @@ function poster() {
         views: [
             {
                 type: 'image',
-                url: require('./assets/avatar.jpg'),
+                url:'https://imgs.solui.cn/avatar.png',
                 css: {
                     top: '20px',
                     left: '36px',
@@ -167,7 +167,7 @@ function poster() {
             },
             {
               type: 'qrcode',
-              content: 'https://github.com/sunnie1992/vue_canvas_poster',
+              content: 'https://github.com/sunniejs/vue_canvas_poster',
               css: {
                   bottom: '50px',
                   right: '26px',
@@ -287,7 +287,7 @@ function drawBasePoster() {
             },
             {
                 type: 'qrcode',
-                content: 'https://github.com/sunnie1992/vue_canvas_poster',
+                content: 'https://github.com/sunniejs/vue_canvas_poster',
                 css: {
                     bottom: '40px',
                     left: '180px',

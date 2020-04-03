@@ -1,11 +1,11 @@
 <template>
   <div>
-    <canvas ref="canvas" :style="painterStyle"  class="canvas"></canvas>
+    <canvas ref="canvas" :style="painterStyle" class="canvas"></canvas>
   </div>
 </template>
 <script>
 import Painter from './painter';
-import { isValidUrl, equal } from './util';
+import { equal } from './util';
 export default {
   name: 'CanvasPoster',
   components: {},
@@ -14,7 +14,7 @@ export default {
       type: Object,
       default: {}
     },
-    
+
     dirty: {
       type: Boolean,
       default: false
@@ -50,7 +50,7 @@ export default {
       isPainting: false,
       canvas: null,
       ctx: null,
-      canvasStyle:''
+      canvasStyle: ''
     }
   },
 
@@ -108,7 +108,7 @@ export default {
           this.$emit('success', imageBase64)
         });
       }).catch(err => {
-         this.$emit('fail', err)
+        this.$emit('fail', err)
       });
     },
     // 下载图片
@@ -119,7 +119,7 @@ export default {
           return;
         }
         const img = new Image()
-        img.setAttribute('crossorigin', 'anonymous');
+        img.setAttribute('crossorigin', 'anonymous')
         img.onload = () => resolve(img)
         img.onerror = () => reject(`下载图片失败 ${url}`)
         img.src = url
@@ -130,7 +130,7 @@ export default {
       return new Promise((resolve, reject) => {
         let preCount = 0;
         let completeCount = 0;
-        const paintCopy = JSON.parse(JSON.stringify(this.painting));
+        const paintCopy = JSON.parse(JSON.stringify(this.painting))
         if (paintCopy.background) {
           preCount++;
           this.download(paintCopy.background).then((image) => {
@@ -152,7 +152,7 @@ export default {
               preCount++;
               /* eslint-disable no-loop-func */
               this.download(view.url).then((image) => {
-                   
+
                 completeCount++;
                 view.url = image;
                 // 获得一下图片信息，供后续裁减使用
