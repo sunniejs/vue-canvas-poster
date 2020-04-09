@@ -7,7 +7,7 @@ vue 组件-简单属性画 Canvas 图
 ## 概述
 
 一个通过 css 属性画 canvas 图片的轻量级的 vue 组件
-(A lightweight vue components use canvas draw image by css properties.)
+(A lightweight vue component that draws canvas images via css properties.)
 
 具有如下特性：
 
