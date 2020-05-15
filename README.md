@@ -7,15 +7,15 @@ vue 组件-简单属性画 Canvas 图
 ## 概述
 
 一个通过 css 属性画 canvas 图片的轻量级的 vue 组件
-(A lightweight vue component that draws canvas images via css properties.)
+(A lightweight vue components use canvas draw image by css properties.)
 
 具有如下特性：
 
-- 绘制文本(换行、超出内容省略号、中划线、下划线、文本加粗)
-- 绘制图片(圆角、旋转、边框)
-- 绘制矩形(圆角、旋转、边框)
-- 绘制二维码
-- 渐变
+-   绘制文本(换行、超出内容省略号、中划线、下划线、文本加粗)
+-   绘制图片(圆角、旋转、边框)
+-   绘制矩形(圆角、旋转、边框)
+-   绘制二维码
+-   渐变
 
 ## 升级说明
 
@@ -29,10 +29,11 @@ npm i
 
 npm run serve
 
-## 生成效果
+## 生成效果，线上体验
 
-<img width="300" src="https://github.com/sunniejs/vue_canvas_poster/blob/master/examples/assets/demo.png"/>
- 
+<p>
+  <img src="./static/demo.png" width="256" style="display:inline;">  <img src="./static/online.png" width="256" style="display:inline;">
+</p>
 
 ## 安装
 
@@ -51,7 +52,7 @@ npm i vue-canvas-poster --save
 template
 
 ```html
- <vue-canvas-poster  :widthPixels="1000" :painting="painting" @success="success" @fail="fail"></vue-canvas-poster>
+<vue-canvas-poster :widthPixels="1000" :painting="painting" @success="success" @fail="fail"></vue-canvas-poster>
 ```
 
 ```javascript
@@ -59,15 +60,15 @@ template
 import { vueCanvasPoster } from 'vue-canvas-poster'
 
 components: {
-  vueCanvasPoster
+    vueCanvasPoster
 }
 
 // 全局注册
 import Vue from 'vue'
 import CanvasPoster from 'vue-canvas-poster'
 Vue.use(CanvasPoster)
-
 ```
+
 <details><summary>例子代码（点击展开）</summary><br>
 
 ```
@@ -232,12 +233,12 @@ Vue.use(CanvasPoster)
         ],
     }
 ```
-</details>
 
+</details>
 
 ## 规范
 
-Canvas  需要根据一定的规范来进行图片绘制，当然比直接画canvas简单的多。 
+Canvas 需要根据一定的规范来进行图片绘制，当然比直接画 canvas 简单的多。
 
 ### 调色板属性
 
@@ -255,22 +256,22 @@ views: 里面承载子 view
 
 当我们把整体的调色板属性构建起来后，里面就可以添加子 View 来进行绘制了。
 
-| type   | 内容    | description                    | 自有css                                                      |
-| ------ | ------- | ------------------------------ | ------------------------------------------------------------ |
-| image  | url     | 表示图片资源的地址，本地或网络 | 见 image 小节                                                |
-| text   | text    | 文本的内容                     | 见 text 小节                                                 |
-| rect   | 无      | 矩形                           | color: 颜色，支持渐变色                                      |
-| qrcode | content | 画二维码                       | background:  背景颜色（默认为透明色）color: 二维码颜色（默认黑色） |
+| type   | 内容    | description                    | 自有 css                                                          |
+| ------ | ------- | ------------------------------ | ----------------------------------------------------------------- |
+| image  | url     | 表示图片资源的地址，本地或网络 | 见 image 小节                                                     |
+| text   | text    | 文本的内容                     | 见 text 小节                                                      |
+| rect   | 无      | 矩形                           | color: 颜色，支持渐变色                                           |
+| qrcode | content | 画二维码                       | background: 背景颜色（默认为透明色）color: 二维码颜色（默认黑色） |
 
 #### image
 
-   image 可以设置成本地图片或者网络图片， 本地用require()引入图片。
-   并且如果未设置 image 的长宽，则长宽的属性值会默认设为auto。 
+image 可以设置成本地图片或者网络图片， 本地用 require()引入图片。
+并且如果未设置 image 的长宽，则长宽的属性值会默认设为 auto。
 
 | 属性名称 | 说明                 | 默认值     |
 | -------- | -------------------- | ---------- |
-| width    | image的宽度        | auto       |
-| height   | image的高度        | auto       |
+| width    | image 的宽度         | auto       |
+| height   | image 的高度         | auto       |
 | mode     | 图片裁剪、缩放的模式 | aspectFill |
 
 **scaleToFill**：不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素
@@ -283,22 +284,21 @@ views: 里面承载子 view
 
 因为 text 的特殊性，此处对 text 进行单独说明。
 
-| 属性名称       | 说明                                                         | 默认值              |
-| -------------- | ------------------------------------------------------------ | ------------------- |
-| fontSize       | 字体大小                                                     | 20px               |
-| color          | 字体颜色                                                     | black               |
-| maxLines       | 最大行数                                                     | 不限，根据 width 来 |
-| lineHeight     | 行高（上下两行文字baseline的距离）                           | fontSize 大小       |
-| fontWeight     | 字体粗细。仅支持 normal, bold                                | normal              |
-| textDecoration | 文本修饰，支持 underline、 overline、 line-through，也可组合使用 | 无效果              |
-| textStyle      | fill： 填充样式，stroke：镂空样式                            | fill                |
-| fontFamily     | 字体  | sans-serif          |
-| background     | 文字背景颜色                                               | 无       |
-| padding        | 文字背景颜色边际与文字间距                                       | 0px      |
-| textAlign | 文字的对齐方式，分为 left, center, right，view 的对齐方式请看 align 属性 | left |
+| 属性名称       | 说明                                                                     | 默认值              |
+| -------------- | ------------------------------------------------------------------------ | ------------------- |
+| fontSize       | 字体大小                                                                 | 20px                |
+| color          | 字体颜色                                                                 | black               |
+| maxLines       | 最大行数                                                                 | 不限，根据 width 来 |
+| lineHeight     | 行高（上下两行文字 baseline 的距离）                                     | fontSize 大小       |
+| fontWeight     | 字体粗细。仅支持 normal, bold                                            | normal              |
+| textDecoration | 文本修饰，支持 underline、 overline、 line-through，也可组合使用         | 无效果              |
+| textStyle      | fill： 填充样式，stroke：镂空样式                                        | fill                |
+| fontFamily     | 字体                                                                     | sans-serif          |
+| background     | 文字背景颜色                                                             | 无                  |
+| padding        | 文字背景颜色边际与文字间距                                               | 0px                 |
+| textAlign      | 文字的对齐方式，分为 left, center, right，view 的对齐方式请看 align 属性 | left                |
 
 当文字设置 width 属性后，则文字布局的最大宽度不会超过该 width 。如果内容超过 width，则会进行换行，如果此时未设置 maxLines 属性，则会把所有内容进行换行处理，行数由内容和 width 决定。如果此时设置了 maxLines 属性，则最大展示所设置的行数，如果还有多余内容未展示出来，则后面会带上 ... 。
-
 
 ### 布局属性
 
@@ -310,7 +310,6 @@ views: 里面承载子 view
 | width、height            | view 的宽度和高度，其中 image 和 text 可不设置 |                       |
 | top、right、bottom、left | 如 css 中为 absolute 布局时的作用，可为 负值   | 默认 top 和 left 为 0 |
 
-
 #### 相对布局方法
 
 很多人有获得文本宽度的需求，因为文本宽度随着字数不同而动态变化，如果想在文本后面加个图标，那么我们就需要获得文本宽度。 解决方案如下：
@@ -320,25 +319,25 @@ views: 里面承载子 view
 {
   id: 'my-text-id',
   type: 'text',
-  
+
 2，然后在后面的 view 中，你可以在 left 和 right 属性中使用这个id。如下
-left: ['10px', 'my-text-id', 比例] 
+left: ['10px', 'my-text-id', 比例]
 表示布局在距离左边（10px + 该text文本宽度 * 比例） 的距离，比例默认为 1，可省去，你也可以使用负数或小数来做计算，最终的 left 会加上文本宽度乘以该数的值。
 
 注意：比例一定为一个 number
 ```
+
 如果想获得高度，top 也支持上述用法，并且除文本外，你可以对任何 view 设置一个 id，然后使用上述方法进行相对布局。
 
 **注：相对布局的那个 view 代码一定需要在被相对的 view 的下面。**
 
 #### border 类型
 
-| 属性         | 说明                                                         | 默认                   |
-| ------------ | ------------------------------------------------------------ | ---------------------- |
+| 属性         | 说明                                                           | 默认                   |
+| ------------ | -------------------------------------------------------------- | ---------------------- |
 | borderRadius | 边界圆角程度，如果是正方形布局，该属性为一半宽或高时，则为圆形 | 0                      |
-| borderWidth  | 边界宽度，外边界                                             | 必设值，否则无边框效果 |
-| borderColor  | 边框颜色                                                     | black                  |
-
+| borderWidth  | 边界宽度，外边界                                               | 必设值，否则无边框效果 |
+| borderColor  | 边框颜色                                                       | black                  |
 
 #### align
 
@@ -346,14 +345,11 @@ Painter 的 align 类型与 css 中的 align 有些许不同。在 Painter 中 a
 
 **注意：如果布局使用了 right 确定位置，则该 view 会默认右对齐布局，但此时文字还是从左边绘制。**
 
-
 ### CSS3 支持
 
 #### shadow
 
- shadow 可以同时修饰 image、rect、text、qrcode 等 。在修饰 text 时则相当于 text-shadow；修饰 image 和 rect 时相当于 box-shadow；修饰 qrcode 时，则相当于二维码有效区域的投影。
-
-
+shadow 可以同时修饰 image、rect、text、qrcode 等 。在修饰 text 时则相当于 text-shadow；修饰 image 和 rect 时相当于 box-shadow；修饰 qrcode 时，则相当于二维码有效区域的投影。
 
 使用方法：
 
@@ -364,6 +360,7 @@ v-shadow: 必需。垂直阴影的位置。允许负值。
 blur: 必需。模糊的距离。
 color: 必需。阴影的颜色。
 ```
+
 #### 渐变色支持
 
 你可以在画布的 background 属性或者 rect 的 color 属性中使用以下方式实现 css 3 的渐变色，其中 radial-gradient 渐变的圆心为 view 中点，半径为最长边，目前不支持自己设置。
@@ -400,6 +397,7 @@ radial-gradient(rgba(0, 0, 0, 0) 5%, #0ff 15%, #f0f 60%)
       console.log('fail', err)
     }
 ```
+
 ## Thanks
 
 感谢 [Painter](https://github.com/Kujiale-Mobile/Painter) 是根据该项目进行修改的，文档有不明白的可以查看 [Painter](https://github.com/Kujiale-Mobile/Painter)
@@ -414,6 +412,7 @@ radial-gradient(rgba(0, 0, 0, 0) 5%, #0ff 15%, #f0f 60%)
 
 获取更多技术相关文章，关注公众号”前端女塾“。
 回复加群，即可加入”前端仙女群“
+
  <p>
   <img src="./static/gognzhonghao.jpg" width="256" style="display:inline;">
 </p>
