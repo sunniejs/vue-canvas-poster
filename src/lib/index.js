@@ -1,15 +1,13 @@
 import vueCanvasPoster from './canvas-poster'
 
-export function install (Vue) {
-	Vue.component('vue-canvas-poster', vueCanvasPoster)
+export function install(Vue) {
+  Vue.component('vue-canvas-poster', vueCanvasPoster)
 }
 
-export {
-	vueCanvasPoster,
-}
+export { vueCanvasPoster }
 
 const myPlugin = {
-	install,
+  install
 }
 
 export default myPlugin
@@ -17,10 +15,10 @@ export default myPlugin
 // Auto-install
 let GlobalVue = null
 if (typeof window !== 'undefined') {
-	GlobalVue = window.Vue
+  GlobalVue = window.Vue
 } else if (typeof global !== 'undefined') {
-	GlobalVue = global.Vue
+  GlobalVue = global.Vue
 }
 if (GlobalVue) {
-	GlobalVue.use(myPlugin)
+  GlobalVue.use(myPlugin)
 }
