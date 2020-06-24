@@ -539,21 +539,6 @@ module.exports = Object.keys || function keys(O) {
 
 /***/ }),
 
-/***/ "0d7f":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("2350")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".canvas[data-v-47dbdd2e]{position:fixed;top:2000px}", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ "0fc9":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1528,6 +1513,21 @@ var $exports = module.exports = function (name) {
 };
 
 $exports.store = store;
+
+
+/***/ }),
+
+/***/ "2c33":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("2350")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".canvas[data-v-234b47c6]{position:fixed;top:2000px}", ""]);
+
+// exports
 
 
 /***/ }),
@@ -4389,27 +4389,29 @@ function () {
 
       this._background();
 
-      var _iteratorNormalCompletion = true;
-      var _didIteratorError = false;
-      var _iteratorError = undefined;
+      if (this.data.views && this.data.views.length > 0) {
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
 
-      try {
-        for (var _iterator = this.data.views[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var view = _step.value;
-
-          this._drawAbsolute(view);
-        }
-      } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
-      } finally {
         try {
-          if (!_iteratorNormalCompletion && _iterator.return != null) {
-            _iterator.return();
+          for (var _iterator = this.data.views[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var view = _step.value;
+
+            this._drawAbsolute(view);
           }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
         } finally {
-          if (_didIteratorError) {
-            throw _iteratorError;
+          try {
+            if (!_iteratorNormalCompletion && _iterator.return != null) {
+              _iterator.return();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
           }
         }
       }
@@ -5178,7 +5180,7 @@ var util_equal = function equal(a, b) {
 
 
 /* harmony default export */ var canvas_postervue_type_script_lang_js_ = ({
-  name: 'CanvasPoster',
+  name: 'VueCanvasPoster',
   props: {
     painting: {
       type: Object,
@@ -5301,7 +5303,7 @@ var util_equal = function equal(a, b) {
         _this2.$emit('fail', err);
       });
     },
-    // 下载图片
+    // 下载所有图片
     downloadImages: function downloadImages() {
       var _this3 = this;
 
@@ -5437,8 +5439,8 @@ function setStringPrototype(scale) {
 }
 // CONCATENATED MODULE: ./src/lib/canvas-poster.vue?vue&type=script&lang=js&
  /* harmony default export */ var lib_canvas_postervue_type_script_lang_js_ = (canvas_postervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/lib/canvas-poster.vue?vue&type=style&index=0&id=47dbdd2e&scoped=true&lang=css&
-var canvas_postervue_type_style_index_0_id_47dbdd2e_scoped_true_lang_css_ = __webpack_require__("bfb4");
+// EXTERNAL MODULE: ./src/lib/canvas-poster.vue?vue&type=style&index=0&id=234b47c6&scoped=true&lang=css&
+var canvas_postervue_type_style_index_0_id_234b47c6_scoped_true_lang_css_ = __webpack_require__("a8fb");
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
@@ -5550,7 +5552,7 @@ var component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "47dbdd2e",
+  "234b47c6",
   null
   
 )
@@ -6365,6 +6367,21 @@ module.exports = function (exec) {
 
 /***/ }),
 
+/***/ "9cb7":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("2c33");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("6cbeca5a", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
 /***/ "9def":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6604,6 +6621,17 @@ module.exports.f = function (C) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("f410");
+
+/***/ }),
+
+/***/ "a8fb":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_234b47c6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("9cb7");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_234b47c6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_234b47c6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_234b47c6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -6855,17 +6883,6 @@ exports.f = __webpack_require__("8e60") ? gOPD : function getOwnPropertyDescript
   if (has(O, P)) return createDesc(!pIE.f.call(O, P), O[P]);
 };
 
-
-/***/ }),
-
-/***/ "bfb4":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_47dbdd2e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("d116");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_47dbdd2e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_47dbdd2e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_47dbdd2e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -7181,21 +7198,6 @@ module.exports = function (object, names) {
 
 /***/ }),
 
-/***/ "d116":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("0d7f");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("025802a9", content, true, {"sourceMap":false,"shadowMode":false});
-
-/***/ }),
-
 /***/ "d2c8":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7267,9 +7269,9 @@ module.exports = function (done, value) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return install; });
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return install; });
 /* harmony import */ var _canvas_poster__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("6ecc");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _canvas_poster__WEBPACK_IMPORTED_MODULE_0__["a"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _canvas_poster__WEBPACK_IMPORTED_MODULE_0__["a"]; });
 
 
 function install(Vue) {
@@ -7279,7 +7281,7 @@ function install(Vue) {
 var myPlugin = {
   install: install
 };
-/* harmony default export */ __webpack_exports__["a"] = (myPlugin); // Auto-install
+/* harmony default export */ __webpack_exports__["b"] = (myPlugin); // Auto-install
 
 var GlobalVue = null;
 
@@ -7701,11 +7703,11 @@ if (typeof window !== 'undefined') {
 var lib = __webpack_require__("d75a");
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
-/* concated harmony reexport install */__webpack_require__.d(__webpack_exports__, "install", function() { return lib["b" /* install */]; });
-/* concated harmony reexport vueCanvasPoster */__webpack_require__.d(__webpack_exports__, "vueCanvasPoster", function() { return lib["c" /* vueCanvasPoster */]; });
+/* concated harmony reexport install */__webpack_require__.d(__webpack_exports__, "install", function() { return lib["c" /* install */]; });
+/* concated harmony reexport VueCanvasPoster */__webpack_require__.d(__webpack_exports__, "VueCanvasPoster", function() { return lib["a" /* VueCanvasPoster */]; });
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (lib["a" /* default */]);
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (lib["b" /* default */]);
 
 
 

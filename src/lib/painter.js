@@ -13,9 +13,12 @@ export default class Painter {
       height: this.data.height.toPx()
     }
     this._background()
-    for (const view of this.data.views) {
-      this._drawAbsolute(view)
+    if (this.data.views && this.data.views.length > 0) {
+      for (const view of this.data.views) {
+        this._drawAbsolute(view)
+      }
     }
+
     callback()
   }
   _background() {

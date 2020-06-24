@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img :src="src" alt="" class="share-image">
-    <vue-canvas-poster  class="poster"  :widthPixels="1000" :painting="painting" @success="success" @fail="fail"></vue-canvas-poster>
+    <vue-canvas-poster class="poster" :widthPixels="1000" :painting="painting" @success="success" @fail="fail"></vue-canvas-poster>
   </div>
 </template>
 <script>
@@ -13,15 +13,15 @@ export default {
   data() {
     return {
       src: '',
-      painting:{}
+      painting: {}
     }
   },
-  mounted(){
-    const params={
-      type:'pro' // 尝试换一下base,image
+  mounted() {
+    const params = {
+      type: 'pro' // 尝试换一下text,image
     }
-    drawPoster(params).then(res=>{
-        this.painting = res
+    drawPoster(params).then(res => {
+      this.painting = res
     })
   },
   methods: {
@@ -37,8 +37,7 @@ export default {
 </script>
 
 <style>
-
-.header{
+.header {
   width: 100%;
   height: 45px;
   line-height: 45px;

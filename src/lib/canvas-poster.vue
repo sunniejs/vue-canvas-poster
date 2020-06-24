@@ -2,7 +2,7 @@
 import Painter from './painter'
 import { equal } from './util'
 export default {
-  name: 'CanvasPoster',
+  name: 'VueCanvasPoster',
   props: {
     painting: {
       type: Object,
@@ -10,7 +10,6 @@ export default {
         return {}
       }
     },
-
     dirty: {
       type: Boolean,
       default: false
@@ -112,8 +111,7 @@ export default {
           this.$emit('fail', err)
         })
     },
-
-    // 下载图片
+    // 下载所有图片
     downloadImages() {
       return new Promise((resolve) => {
         let preCount = 0
