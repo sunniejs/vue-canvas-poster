@@ -12,7 +12,7 @@ assignees: ''
 Browser version [浏览器类型和版本]
  
 
-vue_canvas_poster version [vue_canvas_poster 版本]
+vue-canvas-poster version [vue_canvas_poster 版本]
  
 
 Vue version [Vue  版本]
