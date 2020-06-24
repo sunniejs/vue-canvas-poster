@@ -1,10 +1,8 @@
 # Vue Canvas Poster 🎉
 
-vue 组件-简单属性画 Canvas 图 <a href="https://www.npmjs.com/package/vue-canvas-poster"> <img src="https://img.shields.io/npm/v/vue-canvas-poster.svg?style=flat" alt="npm"></a>
+> [Vue Canvas Poster](https://sunniejs.github.io/vue-canvas-poster/#/) 一个通过 css 属性画 canvas 图片的轻量级的 vue 组件。 (A lightweight vue components use canvas draw image by css properties.)
 
-## 概括
-
-> [Vue Canvas Poster](https://github.com/sunniejs/vue-canvas-poster) 一个通过 css 属性画 canvas 图片的轻量级的 vue 组件。 (A lightweight vue components use canvas draw image by css properties.)
+[Vue Canvas Poster 文档](https://sunniejs.github.io/vue-canvas-poster/#/)
 
 #### 主要特性：
 
@@ -24,11 +22,19 @@ vue 组件-简单属性画 Canvas 图 <a href="https://www.npmjs.com/package/vue
 
 #### 升级说明
 
-V1.0.0 以上增加了很多特性，新老版本不兼容，请谨慎升级，老版本不在维护，如果你用的是老版本的请移步 [0.1.16](https://github.com/sunniejs/vue_canvas_poster/tree/0.1.16)
+v1.0.0 以上增加了很多特性，新老版本不兼容，请谨慎升级，老版本不在维护，如果你用的是老版本的请移步 [0.1.16](https://github.com/sunniejs/vue_canvas_poster/tree/0.1.16)
+
+注意：版本 v1.1.1 及以上采用 `VueCanvasPoster` 大写，低版本`vueCanvasPoster`升级需要修改
+
+```
+import { VueCanvasPoster } from 'vue-canvas-poster'
+```
 
 #### 预览
 
-![logo](_images/demo.png ':size=300x478')
+<p>
+  <img src="./static/demo.png" width="256" style="display:inline;">
+</p>
 
 #### 线上 Demo
 
@@ -36,7 +42,15 @@ V1.0.0 以上增加了很多特性，新老版本不兼容，请谨慎升级，�
 
 手机扫码查看
 
-![logo](_images/qrcode.png ':size=200x200')
+ <p>
+  <img src="./static/qrcode.png" width="256" style="display:inline;">
+</p>
+
+#### 上线项目
+
+<p>
+  <img src="./static/online.png" width="256" style="display:inline;">
+</p>
 
 #### 关注我的知乎，掘金
 
@@ -55,5 +69,8 @@ V1.0.0 以上增加了很多特性，新老版本不兼容，请谨慎升级，�
 
 &nbsp;&nbsp;&nbsp;&nbsp;扫描下方二维码:point_down::point_down:关注“前端女塾”
 
-![logo](https://imgs.solui.cn/wx/640.gif ':size=262x224')  
+ <p>
+  <img src="./static/gognzhonghao.jpg" width="256" style="display:inline;">
+</p>
+
 关注公众号：回复“加群”即可加 前端仙女群
