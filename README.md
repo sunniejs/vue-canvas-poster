@@ -22,7 +22,7 @@
 
 #### 升级说明
 
-v1.0.0 以上增加了很多特性，新老版本不兼容，请谨慎升级，老版本不在维护，如果你用的是老版本的请移步 [0.1.16](https://github.com/sunniejs/vue_canvas_poster/tree/0.1.16)
+v1.0.0 以上增加了很多特性，新老版本不兼容，请谨慎升级，老版本不在维护，如果你用的是老版本的请移步 [0.1.16](https://github.com/sunniejs/vue-canvas-poster/tree/0.1.16)
 
 注意：版本 v1.1.1 及以上采用 `VueCanvasPoster` 大写，低版本`vueCanvasPoster`升级需要修改
 
