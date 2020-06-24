@@ -2,7 +2,7 @@
 
 > [Vue Canvas Poster](https://sunniejs.github.io/vue-canvas-poster/#/) 一个通过 css 属性画 canvas 图片的轻量级的 vue 组件。 (A lightweight vue components use canvas draw image by css properties.)
 
-[Vue Canvas Poster 文档](https://sunniejs.github.io/vue-canvas-poster/#/)
+> [Vue Canvas Poster 文档](https://sunniejs.github.io/vue-canvas-poster/#/)
 
 #### 主要特性：
 
