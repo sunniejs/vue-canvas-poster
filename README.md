@@ -1,9 +1,5 @@
 # Vue Canvas Poster 🎉
 
-vue 组件-简单属性画 Canvas 图 <a href="https://www.npmjs.com/package/vue-canvas-poster"> <img src="https://img.shields.io/npm/v/vue-canvas-poster.svg?style=flat" alt="npm"></a>
-
-## 概括
-
 > [Vue Canvas Poster](https://github.com/sunniejs/vue-canvas-poster) 一个通过 css 属性画 canvas 图片的轻量级的 vue 组件。 (A lightweight vue components use canvas draw image by css properties.)
 
 #### 主要特性：
