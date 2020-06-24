@@ -23,12 +23,12 @@ Vue.use(VueCanvasPoster)
 
 ```html
 <script>
-  import { VueCanvasPoster } from 'vue-canvas-poster'
-  export default {
-    components: {
-      VueCanvasPoster
+    import { VueCanvasPoster } from 'vue-canvas-poster'
+    export default {
+        components: {
+            VueCanvasPoster,
+        },
     }
-  }
 </script>
 ```
 
@@ -36,44 +36,44 @@ Vue.use(VueCanvasPoster)
 
 ```html
 <template>
-  <div>
-    <vue-canvas-poster :widthPixels="1000" :painting="painting" @success="success" @fail="fail"></vue-canvas-poster>
-  </div>
+    <div>
+        <vue-canvas-poster :widthPixels="1000" :painting="painting" @success="success" @fail="fail"></vue-canvas-poster>
+    </div>
 </template>
 <script>
-  export default {
-    data() {
-      return {
-        painting: {
-          width: '550px',
-          height: '876px',
-          background: '#f4f5f7',
-          views: [
-            {
-              type: 'image',
-              url: require('./assets/avatar.jpg'),
-              css: {
-                top: '20px',
-                left: '36px',
-                borderRadius: '40px',
-                width: '80px',
-                height: '80px'
-              }
+    export default {
+        data() {
+            return {
+                painting: {
+                    width: '550px',
+                    height: '876px',
+                    background: '#f4f5f7',
+                    views: [
+                        {
+                            type: 'image',
+                            url: require('./assets/avatar.jpg'),
+                            css: {
+                                top: '20px',
+                                left: '36px',
+                                borderRadius: '40px',
+                                width: '80px',
+                                height: '80px',
+                            },
+                        },
+                        // ....
+                    ],
+                },
             }
-            // ....
-          ]
-        }
-      }
-    },
-    methods: {
-      success(src) {
-        console.log(src)
-      },
-      fail(err) {
-        console.log('fail', err)
-      }
+        },
+        methods: {
+            success(src) {
+                console.log(src)
+            },
+            fail(err) {
+                console.log('fail', err)
+            },
+        },
     }
-  }
 </script>
 ```
 
