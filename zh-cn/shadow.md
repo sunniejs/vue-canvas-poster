@@ -23,51 +23,51 @@ color: 必需。阴影的颜色。
 
 ```javascript
 return {
-  width: '654px',
-  height: '1000px',
-  background: '#eee',
-  views: [
-    {
-      type: 'image',
-      url: 'https://imgs.solui.cn/avatar.png',
-      css: {
-        width: '200px',
-        height: '200px',
-        shadow: '10px 10px 5px #888888'
-      }
-    },
-    {
-      type: 'rect',
-      css: {
-        width: '250px',
-        height: '150px',
-        right: '50px',
-        top: '60px',
-        shadow: '10px 10px 5px #888888',
-        color: 'linear-gradient(120deg, #fccb90 0%, #d57eeb 100%)'
-      }
-    },
-    {
-      type: 'qrcode',
-      content: 'https://github.com/sunniejs/vue-canvas-poster',
-      css: {
-        top: '230px',
-        width: '120px',
-        height: '120px',
-        shadow: '10px 10px 5px #888888'
-      }
-    },
-    {
-      type: 'text',
-      text: "shadow: '10px 10px 5px #888888'",
-      css: {
-        left: '150px',
-        fontSize: '30px',
-        shadow: '10px 10px 5px #888888',
-        top: '290px'
-      }
-    }
-  ]
+    width: '654px',
+    height: '1000px',
+    background: '#eee',
+    views: [
+        {
+            type: 'image',
+            url: 'https://www.sunniejs.cn/static/avatar.png',
+            css: {
+                width: '200px',
+                height: '200px',
+                shadow: '10px 10px 5px #888888'
+            }
+        },
+        {
+            type: 'rect',
+            css: {
+                width: '250px',
+                height: '150px',
+                right: '50px',
+                top: '60px',
+                shadow: '10px 10px 5px #888888',
+                color: 'linear-gradient(120deg, #fccb90 0%, #d57eeb 100%)'
+            }
+        },
+        {
+            type: 'qrcode',
+            content: 'https://github.com/sunniejs/vue-canvas-poster',
+            css: {
+                top: '230px',
+                width: '120px',
+                height: '120px',
+                shadow: '10px 10px 5px #888888'
+            }
+        },
+        {
+            type: 'text',
+            text: "shadow: '10px 10px 5px #888888'",
+            css: {
+                left: '150px',
+                fontSize: '30px',
+                shadow: '10px 10px 5px #888888',
+                top: '290px'
+            }
+        }
+    ]
 }
 ```
 

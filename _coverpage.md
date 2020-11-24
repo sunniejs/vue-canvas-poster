@@ -9,4 +9,4 @@ A lightweight vue components use canvas draw image by css properties.
 
 <!-- background image -->
 
-![](https://imgs.solui.cn/wx/bg.jpg)
+![](https://www.sunniejs.cn/static/wx/bg.jpg)

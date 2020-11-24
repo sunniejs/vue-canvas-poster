@@ -16,29 +16,29 @@
 
 ```javascript
 {
-  // ...
-  views: [
-    {
-      type: 'text',
-      text: 'https://imgs.solui.cn/avatar.png',
-      css: {}
-    },
-    {
-      type: 'image',
-      url: 'https://imgs.solui.cn/avatar.png',
-      css: {}
-    },
-    {
-      type: 'rect',
-      css: {}
-    },
-    {
-      type: 'qrcode',
-      content: 'https://imgs.solui.cn/avatar.png',
-      css: {}
-    }
-  ]
-  // ...
+    // ...
+    views: [
+        {
+            type: 'text',
+            text: 'https://www.sunniejs.cn/static/avatar.png',
+            css: {}
+        },
+        {
+            type: 'image',
+            url: 'https://www.sunniejs.cn/static/avatar.png',
+            css: {}
+        },
+        {
+            type: 'rect',
+            css: {}
+        },
+        {
+            type: 'qrcode',
+            content: 'https://www.sunniejs.cn/static/avatar.png',
+            css: {}
+        }
+    ]
+    // ...
 }
 ```
 

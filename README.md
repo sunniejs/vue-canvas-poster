@@ -34,7 +34,7 @@ import { VueCanvasPoster } from 'vue-canvas-poster'
 
 #### 线上 Demo
 
-[查看 demo](https://www.solui.cn/vant-demo/#/example/poster) 建议手机端查看
+[查看 demo](https://www.sunniejs.cn/vant-demo/#/example/poster) 建议手机端查看
 
 手机扫码查看
 
@@ -57,5 +57,5 @@ import { VueCanvasPoster } from 'vue-canvas-poster'
 
 &nbsp;&nbsp;&nbsp;&nbsp;扫描下方二维码:point_down::point_down:关注“前端女塾”
 
-![logo](https://imgs.solui.cn/wx/640.gif ':size=262x224')  
+![logo](https://www.sunniejs.cn/static/wx/640.gif ':size=262x224')  
 关注公众号：回复“加群”即可加 前端仙女群
