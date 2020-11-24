@@ -28,7 +28,7 @@ function poster() {
     views: [
       {
         type: 'image',
-        url: 'https://www.sunniejs.cn/assets/avatar.png',
+        url: 'https://www.sunniejs.cn/static/avatar.png',
         css: {
           top: '20px',
           left: '36px',
