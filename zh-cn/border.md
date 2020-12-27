@@ -4,10 +4,10 @@
 
 | 属性         | 属性   | 说明                                                           | 默认                   |
 | ------------ | ------ | -------------------------------------------------------------- | ---------------------- |
-| borderWidth  | String | 边界宽度，外边界                                               | 必设值，否则无边框效果 |
-| borderRadius | String | 边界圆角程度，如果是正方形布局，该属性为一半宽或高时，则为圆形 | 0                      |
-| borderColor  | String | 边框颜色                                                       | black                  |
-
+| borderRadius | 边界圆角程度，如果是正方形布局，该属性为一半宽或高时，则为圆形。v1.2.0新增支持百分号设置 | 0                      |
+| borderWidth  | 边界宽度，外边界                                               | 必设值，否则无边框效果 |
+| borderColor  | 边框颜色                                                       | black                  |
+| borderStyle  | 边框样式，支持 dashed、dotted、solid （v1.2.0新增）                          | solid                  |
 #### 举例
 
 <details><summary>例子代码（点击展开）</summary><br>
