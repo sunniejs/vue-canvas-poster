@@ -187,20 +187,26 @@ function setStringPrototype(scale) {
    * 是否支持负数
    * @param {Boolean} minus 是否支持负数
    */
-  String.prototype.toPx = function toPx(minus) {
-    let reg
-    if (minus) {
-      reg = /^-?[0-9]+([.]{1}[0-9]+){0,1}(px)$/g
-    } else {
-      reg = /^[0-9]+([.]{1}[0-9]+){0,1}(px)$/g
-    }
-    const results = reg.exec(this)
-    if (!this || !results) {
-      console.error(`The size: ${this} is illegal`)
+  String.prototype.toPx = function toPx(minus, baseSize) {
+    if (this === '0') {
       return 0
     }
+    let reg
+    if (minus) {
+      reg = /^-?[0-9]+([.]{1}[0-9]+){0,1}(px|%)$/g
+    } else {
+      reg = /^[0-9]+([.]{1}[0-9]+){0,1}(px|%)$/g
+    }
+    const results = reg.exec(this)
+    const unit = results[2]
     const value = parseFloat(this)
-    return Math.round(value * (scale || 1))
+    let res = 0
+    if (unit === 'px') {
+      res = Math.round(value * (scale || 1))
+    } else if (unit === '%') {
+      res = Math.round((value * baseSize) / 100)
+    }
+    return res
   }
 }
 </script>

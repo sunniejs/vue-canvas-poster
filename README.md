@@ -6,7 +6,7 @@
 
 #### 主要特性：
 
-- 绘制文本(换行、超出内容省略号、中划线、下划线、文本加粗)
+- 绘制文本(换行、超出内容省略号、中划线、下划线、文本加粗、文字缩进)
 - 绘制图片(圆角、旋转、边框、模式:类似小程序 image mode)
 - 绘制矩形(圆角、旋转、边框)
 - 绘制二维码
@@ -21,6 +21,8 @@
 **高清：** 可以通过 `widthPixels` 设置生成图片尺寸，解决图片模糊问题。
 
 #### 升级说明
+
+v1.2.0 文本添加缩进特性 
 
 v1.0.0 以上增加了很多特性，新老版本不兼容，请谨慎升级，老版本不在维护，如果你用的是老版本的请移步 [0.1.16](https://github.com/sunniejs/vue-canvas-poster/tree/0.1.16)
 
@@ -38,7 +40,7 @@ import { VueCanvasPoster } from 'vue-canvas-poster'
 
 #### 线上 Demo
 
-[查看 demo](https://www.solui.cn/vant-demo/#/example/poster) 建议手机端查看
+[查看 demo](https://www.sunniejs.cn/vant-demo/#/example/poster) 建议手机端查看
 
 手机扫码查看
 

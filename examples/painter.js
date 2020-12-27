@@ -5,9 +5,6 @@ export function drawPoster(data) {
       case 'pro':
         resolve(poster(data))
         break
-      case 'base':
-        resolve(drawBasePoster(data))
-        break
       case 'image':
         resolve(drawImgPoster(data))
         break
@@ -32,12 +29,13 @@ function poster() {
         css: {
           top: '20px',
           left: '36px',
-          borderRadius: '40px',
+          borderRadius: '100%',
           width: '80px',
-          height: '80px'
+          height: '80px',
+          borderWidth: '6px',
+          borderColor: '#fff'
         }
       },
-
       {
         type: 'text',
         text: '乖摸摸头的小店,我设置了maxLines为1',
@@ -46,7 +44,8 @@ function poster() {
           left: '136px',
           width: '360px',
           maxLines: 1,
-          fontSize: '26px'
+          fontSize: '26px',
+          fontWeight: '500'
         }
       },
       {
@@ -87,7 +86,20 @@ function poster() {
           top: '320px',
           left: '364px',
           width: '160px',
-          height: '160px'
+          height: '160px',
+        }
+      },
+      {
+        type: 'text',
+        text: '二手精选',
+        css: {
+          top: '507px',
+          left: '27px',
+          fontSize: '22px',
+          color: '#02BE8A',
+          padding: '3px 4px 3px 4px',
+          borderRadius: '2px',
+          background: 'rgba(2,190,138,0.1)'
         }
       },
       {
@@ -96,9 +108,10 @@ function poster() {
         css: {
           top: '507px',
           left: '25px',
+          textIndent: '110px',
           color: '#666666',
           fontSize: '22px',
-          width: '450px',
+          width: '460px',
           lineHeight: '33px',
           maxLines: 2
         }
@@ -114,8 +127,9 @@ function poster() {
         }
       },
       {
+        id:'price',
         type: 'text',
-        text: '¥39.00',
+        text: '¥392.00',
         css: {
           top: '601px',
           left: '116px',
@@ -129,7 +143,7 @@ function poster() {
         text: '¥259.00',
         css: {
           top: '609px',
-          left: '243px',
+          left: ['130px', 'price'],
           color: '#999999',
           fontSize: '26px',
           fontWeight: 'bold',
@@ -370,3 +384,4 @@ function drawText() {
     ]
   }
 }
+ 

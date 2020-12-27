@@ -635,6 +635,21 @@ module.exports = (
 
 /***/ }),
 
+/***/ "17b2":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("f504");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("f1f1a1ae", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
 /***/ "1991":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1504,21 +1519,6 @@ var $exports = module.exports = function (name) {
 };
 
 $exports.store = store;
-
-
-/***/ }),
-
-/***/ "2c33":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("2350")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".canvas[data-v-234b47c6]{position:fixed;top:2000px}", ""]);
-
-// exports
 
 
 /***/ }),
@@ -3263,6 +3263,26 @@ module.exports = function (name) {
 
 /***/ }),
 
+/***/ "6762":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// https://github.com/tc39/Array.prototype.includes
+var $export = __webpack_require__("5ca1");
+var $includes = __webpack_require__("c366")(true);
+
+$export($export.P, 'Array', {
+  includes: function includes(el /* , fromIndex = 0 */) {
+    return $includes(this, el, arguments.length > 1 ? arguments[1] : undefined);
+  }
+});
+
+__webpack_require__("9c6c")('includes');
+
+
+/***/ }),
+
 /***/ "67ab":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4262,14 +4282,14 @@ var es6_number_constructor = __webpack_require__("c5f6");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.replace.js
 var es6_regexp_replace = __webpack_require__("a481");
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.split.js
-var es6_regexp_split = __webpack_require__("28a5");
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es7.array.includes.js
+var es7_array_includes = __webpack_require__("6762");
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.fill.js
 var es6_array_fill = __webpack_require__("6c7b");
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.object.assign.js
-var es6_object_assign = __webpack_require__("f751");
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.split.js
+var es6_regexp_split = __webpack_require__("28a5");
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js
 var is_array = __webpack_require__("a745");
@@ -4407,7 +4427,7 @@ function () {
         }
       }
 
-      callback();
+      callback && callback();
     }
   }, {
     key: "_background",
@@ -4422,12 +4442,9 @@ function () {
       this._doClip(this.data.borderRadius, width, height);
 
       if (!bg) {
-        // 如果未设置背景，则默认使用白色
-        this.ctx.fillStyle = '#fff';
+        // 如果未设置背景，则默认使用透明色
+        this.ctx.fillStyle = 'transparent';
         this.ctx.fillRect(-(width / 2), -(height / 2), width, height);
-      } else if (bg.src) {
-        // 背景填充图片
-        this.ctx.drawImage(bg, -(width / 2), -(height / 2), width, height);
       } else if (bg.startsWith('#') || bg.startsWith('rgba') || bg.toLowerCase() === 'transparent') {
         // 背景填充颜色
         this.ctx.fillStyle = bg;
@@ -4435,6 +4452,9 @@ function () {
       } else if (GD.api.isGradient(bg)) {
         GD.api.doGradient(bg, width, height, this.ctx);
         this.ctx.fillRect(-(width / 2), -(height / 2), width, height);
+      } else {
+        // 背景填充图片
+        this.ctx.drawImage(bg, -(width / 2), -(height / 2), width, height);
       }
 
       this.ctx.restore();
@@ -4442,7 +4462,12 @@ function () {
   }, {
     key: "_drawAbsolute",
     value: function _drawAbsolute(view) {
-      // 证明 css 为数组形式，需要合并
+      if (!(view && view.type)) {
+        // 过滤无效 view
+        return;
+      } // 证明 css 为数组形式，需要合并
+
+
       if (view.css && view.css.length) {
         /* eslint-disable no-param-reassign */
         view.css = Object.assign.apply(Object, _toConsumableArray(view.css));
@@ -4473,29 +4498,99 @@ function () {
           break;
       }
     }
+  }, {
+    key: "_border",
+    value: function _border(_ref) {
+      var _ref$borderRadius = _ref.borderRadius,
+          borderRadius = _ref$borderRadius === void 0 ? 0 : _ref$borderRadius,
+          width = _ref.width,
+          height = _ref.height,
+          _ref$borderWidth = _ref.borderWidth,
+          borderWidth = _ref$borderWidth === void 0 ? 0 : _ref$borderWidth,
+          _ref$borderStyle = _ref.borderStyle,
+          borderStyle = _ref$borderStyle === void 0 ? 'solid' : _ref$borderStyle;
+      var r1 = 0,
+          r2 = 0,
+          r3 = 0,
+          r4 = 0;
+      var minSize = Math.min(width, height);
+
+      if (borderRadius) {
+        var border = borderRadius.split(/\s+/);
+
+        if (border.length === 4) {
+          r1 = Math.min(border[0].toPx(false, minSize), width / 2, height / 2);
+          r2 = Math.min(border[1].toPx(false, minSize), width / 2, height / 2);
+          r3 = Math.min(border[2].toPx(false, minSize), width / 2, height / 2);
+          r4 = Math.min(border[3].toPx(false, minSize), width / 2, height / 2);
+        } else {
+          r1 = r2 = r3 = r4 = Math.min(borderRadius && borderRadius.toPx(false, minSize), width / 2, height / 2);
+        }
+      }
+
+      var lineWidth = borderWidth && borderWidth.toPx(false, minSize);
+      this.ctx.lineWidth = lineWidth;
+
+      if (borderStyle === 'dashed') {
+        this.ctx.setLineDash([lineWidth * 4 / 3, lineWidth * 4 / 3]); // this.ctx.lineDashOffset = 2 * lineWidth
+      } else if (borderStyle === 'dotted') {
+        this.ctx.setLineDash([lineWidth, lineWidth]);
+      }
+
+      var notSolid = borderStyle !== 'solid';
+      this.ctx.beginPath();
+      notSolid && r1 === 0 && this.ctx.moveTo(-width / 2 - lineWidth, -height / 2 - lineWidth / 2); // 顶边虚线规避重叠规则
+
+      r1 !== 0 && this.ctx.arc(-width / 2 + r1, -height / 2 + r1, r1 + lineWidth / 2, 1 * Math.PI, 1.5 * Math.PI); //左上角圆弧
+
+      this.ctx.lineTo(r2 === 0 ? notSolid ? width / 2 : width / 2 + lineWidth / 2 : width / 2 - r2, -height / 2 - lineWidth / 2); // 顶边线
+
+      notSolid && r2 === 0 && this.ctx.moveTo(width / 2 + lineWidth / 2, -height / 2 - lineWidth); // 右边虚线规避重叠规则
+
+      r2 !== 0 && this.ctx.arc(width / 2 - r2, -height / 2 + r2, r2 + lineWidth / 2, 1.5 * Math.PI, 2 * Math.PI); // 右上角圆弧
+
+      this.ctx.lineTo(width / 2 + lineWidth / 2, r3 === 0 ? notSolid ? height / 2 : height / 2 + lineWidth / 2 : height / 2 - r3); // 右边线
+
+      notSolid && r3 === 0 && this.ctx.moveTo(width / 2 + lineWidth, height / 2 + lineWidth / 2); // 底边虚线规避重叠规则
+
+      r3 !== 0 && this.ctx.arc(width / 2 - r3, height / 2 - r3, r3 + lineWidth / 2, 0, 0.5 * Math.PI); // 右下角圆弧
+
+      this.ctx.lineTo(r4 === 0 ? notSolid ? -width / 2 : -width / 2 - lineWidth / 2 : -width / 2 + r4, height / 2 + lineWidth / 2); // 底边线
+
+      notSolid && r4 === 0 && this.ctx.moveTo(-width / 2 - lineWidth / 2, height / 2 + lineWidth); // 左边虚线规避重叠规则
+
+      r4 !== 0 && this.ctx.arc(-width / 2 + r4, height / 2 - r4, r4 + lineWidth / 2, 0.5 * Math.PI, 1 * Math.PI); // 左下角圆弧
+
+      this.ctx.lineTo(-width / 2 - lineWidth / 2, r1 === 0 ? notSolid ? -height / 2 : -height / 2 - lineWidth / 2 : -height / 2 + r1); // 左边线
+
+      notSolid && r1 === 0 && this.ctx.moveTo(-width / 2 - lineWidth, -height / 2 - lineWidth / 2); // 顶边虚线规避重叠规则
+
+      if (!notSolid) {
+        this.ctx.closePath();
+      }
+    }
     /**
      * 根据 borderRadius 进行裁减
      */
 
   }, {
     key: "_doClip",
-    value: function _doClip(borderRadius, width, height) {
+    value: function _doClip(borderRadius, width, height, borderStyle) {
       if (borderRadius && width && height) {
-        var r = Math.min(borderRadius.toPx(), width / 2, height / 2); // 防止在某些机型上周边有黑框现象，此处如果直接设置 fillStyle 为透明，在 Android 机型上会导致被裁减的图片也变为透明， iOS 和 IDE 上不会
+        // 防止在某些机型上周边有黑框现象，此处如果直接设置 fillStyle 为透明，在 Android 机型上会导致被裁减的图片也变为透明， iOS 和 IDE 上不会
         // globalAlpha 在 1.9.90 起支持，低版本下无效，但把 fillStyle 设为了 white，相对默认的 black 要好点
-
         this.ctx.globalAlpha = 0;
         this.ctx.fillStyle = 'white';
-        this.ctx.beginPath();
-        this.ctx.arc(-width / 2 + r, -height / 2 + r, r, 1 * Math.PI, 1.5 * Math.PI);
-        this.ctx.lineTo(width / 2 - r, -height / 2);
-        this.ctx.arc(width / 2 - r, -height / 2 + r, r, 1.5 * Math.PI, 2 * Math.PI);
-        this.ctx.lineTo(width / 2, height / 2 - r);
-        this.ctx.arc(width / 2 - r, height / 2 - r, r, 0, 0.5 * Math.PI);
-        this.ctx.lineTo(-width / 2 + r, height / 2);
-        this.ctx.arc(-width / 2 + r, height / 2 - r, r, 0.5 * Math.PI, 1 * Math.PI);
-        this.ctx.closePath();
-        this.ctx.fill();
+
+        this._border({
+          borderRadius: borderRadius,
+          width: width,
+          height: height,
+          borderStyle: borderStyle
+        });
+
+        this.ctx.fill(); // 在 ios 的 6.6.6 版本上 clip 有 bug，禁掉此类型上的 clip，也就意味着，在此版本微信的 ios 设备下无法使用 border 属性
+
         this.ctx.clip();
         this.ctx.globalAlpha = 1;
       }
@@ -4514,7 +4609,8 @@ function () {
       var _view$css = view.css,
           borderRadius = _view$css.borderRadius,
           borderWidth = _view$css.borderWidth,
-          borderColor = _view$css.borderColor;
+          borderColor = _view$css.borderColor,
+          borderStyle = _view$css.borderStyle;
 
       if (!borderWidth) {
         return;
@@ -4524,26 +4620,16 @@ function () {
 
       this._preProcess(view, true);
 
-      var r;
-
-      if (borderRadius) {
-        r = Math.min(borderRadius.toPx(), width / 2, height / 2);
-      } else {
-        r = 0;
-      }
-
-      var lineWidth = borderWidth.toPx();
-      this.ctx.lineWidth = lineWidth;
       this.ctx.strokeStyle = borderColor || 'black';
-      this.ctx.beginPath();
-      this.ctx.arc(-width / 2 + r, -height / 2 + r, r + lineWidth / 2, 1 * Math.PI, 1.5 * Math.PI);
-      this.ctx.lineTo(width / 2 - r, -height / 2 - lineWidth / 2);
-      this.ctx.arc(width / 2 - r, -height / 2 + r, r + lineWidth / 2, 1.5 * Math.PI, 2 * Math.PI);
-      this.ctx.lineTo(width / 2 + lineWidth / 2, height / 2 - r);
-      this.ctx.arc(width / 2 - r, height / 2 - r, r + lineWidth / 2, 0, 0.5 * Math.PI);
-      this.ctx.lineTo(-width / 2 + r, height / 2 + lineWidth / 2);
-      this.ctx.arc(-width / 2 + r, height / 2 - r, r + lineWidth / 2, 0.5 * Math.PI, 1 * Math.PI);
-      this.ctx.closePath();
+
+      this._border({
+        borderRadius: borderRadius,
+        width: width,
+        height: height,
+        borderWidth: borderWidth,
+        borderStyle: borderStyle
+      });
+
       this.ctx.stroke();
       this.ctx.restore();
     }
@@ -4554,6 +4640,8 @@ function () {
       var height;
       var extra;
 
+      var paddings = this._doPaddings(view);
+
       switch (view.type) {
         case 'text':
           {
@@ -4563,20 +4651,37 @@ function () {
               if (textArray[i] === '') {
                 textArray[i] = ' ';
               }
+            } // const fontWeight = view.css.fontWeight === 'bold' ? 'bold' : 'normal'
+
+
+            var fontWeightArr = ['normal', 'bold', 'bolder', 'lighter', '100', '200', '300', '400', '500', '600', '700', '800', '900'];
+            var fontWeight = fontWeightArr.includes(view.css.fontWeight) ? view.css.fontWeight : 'normal';
+            var textStyle = view.css.textStyle === 'italic' ? 'italic' : 'normal';
+            var textIndent = view.css.textIndent ? view.css.textIndent.toPx() : 0;
+
+            if (!view.css.fontSize) {
+              view.css.fontSize = '20rpx';
             }
 
-            var fontWeight = view.css.fontWeight === 'bold' ? 'bold' : 'normal';
-            view.css.fontSize = view.css.fontSize ? view.css.fontSize : '20px';
-            this.ctx.font = "normal ".concat(fontWeight, " ").concat(view.css.fontSize.toPx(), "px ").concat(view.css.fontFamily ? view.css.fontFamily : 'sans-serif'); // this.ctx.setFontSize(view.css.fontSize.toPx());
-            // 计算行数
+            this.ctx.font = "".concat(textStyle, " ").concat(fontWeight, " ").concat(view.css.fontSize.toPx(), "px \"").concat(view.css.fontFamily || 'sans-serif', "\""); // 计算行数
 
             var lines = 0;
             var linesArray = [];
 
             for (var _i = 0; _i < textArray.length; ++_i) {
-              var textLength = this.ctx.measureText(textArray[_i]).width;
-              var partWidth = view.css.width ? view.css.width.toPx() : textLength;
-              var calLines = Math.ceil(textLength / partWidth);
+              var textLength = this.ctx.measureText(textArray[_i]).width; // 最小长度
+
+              var minWidth = view.css.fontSize.toPx() + paddings[1] + paddings[3];
+              var partWidth = view.css.width ? view.css.width.toPx(false, this.style.width) - paddings[1] - paddings[3] : textLength;
+
+              if (partWidth < minWidth) {
+                partWidth = minWidth;
+              } // textIndent 最大为一行
+
+
+              textIndent = textIndent > partWidth ? partWidth : textIndent;
+              var calLines = Math.ceil((textLength + textIndent) / partWidth); // 取最长的作为 width
+
               width = partWidth > width ? partWidth : width;
               lines += calLines;
               linesArray[_i] = calLines;
@@ -4586,6 +4691,7 @@ function () {
             var lineHeight = view.css.lineHeight ? view.css.lineHeight.toPx() : view.css.fontSize.toPx();
             height = lineHeight * lines;
             extra = {
+              textIndent: textIndent,
               lines: lines,
               lineHeight: lineHeight,
               textArray: textArray,
@@ -4611,14 +4717,14 @@ function () {
               width = Math.round(view.sWidth);
               height = Math.round(view.sHeight);
             } else if (view.css.width === 'auto') {
-              height = view.css.height.toPx();
+              height = view.css.height.toPx(false, this.style.height);
               width = view.sWidth / view.sHeight * height;
             } else if (view.css.height === 'auto') {
-              width = view.css.width.toPx();
+              width = view.css.width.toPx(false, this.style.width);
               height = view.sHeight / view.sWidth * width;
             } else {
-              width = view.css.width.toPx();
-              height = view.css.height.toPx();
+              width = view.css.width.toPx(false, this.style.width);
+              height = view.css.height.toPx(false, this.style.height);
             }
 
             break;
@@ -4630,8 +4736,8 @@ function () {
             return;
           }
 
-          width = view.css.width.toPx();
-          height = view.css.height.toPx();
+          width = view.css.width.toPx(false, this.style.width);
+          height = view.css.height.toPx(false, this.style.height);
           break;
       }
 
@@ -4639,19 +4745,19 @@ function () {
 
       if (view.css && view.css.right) {
         if (typeof view.css.right === 'string') {
-          x = this.style.width - view.css.right.toPx(true);
+          x = this.style.width - view.css.right.toPx(true, this.style.width);
         } else {
           // 可以用数组方式，把文字长度计算进去
           // [right, 文字id, 乘数（默认 1）]
           var rights = view.css.right;
-          x = this.style.width - rights[0].toPx(true) - this.globalWidth[rights[1]] * (rights[2] || 1);
+          x = this.style.width - rights[0].toPx(true, this.style.width) - this.globalWidth[rights[1]] * (rights[2] || 1);
         }
       } else if (view.css && view.css.left) {
         if (typeof view.css.left === 'string') {
-          x = view.css.left.toPx(true);
+          x = view.css.left.toPx(true, this.style.width);
         } else {
           var lefts = view.css.left;
-          x = lefts[0].toPx(true) + this.globalWidth[lefts[1]] * (lefts[2] || 1);
+          x = lefts[0].toPx(true, this.style.width) + this.globalWidth[lefts[1]] * (lefts[2] || 1);
         }
       } else {
         x = 0;
@@ -4661,14 +4767,14 @@ function () {
       var y;
 
       if (view.css && view.css.bottom) {
-        y = this.style.height - height - view.css.bottom.toPx(true);
+        y = this.style.height - height - view.css.bottom.toPx(true, this.style.height);
       } else {
         if (view.css && view.css.top) {
           if (typeof view.css.top === 'string') {
-            y = view.css.top.toPx(true);
+            y = view.css.top.toPx(true, this.style.height);
           } else {
             var tops = view.css.top;
-            y = tops[0].toPx(true) + this.globalHeight[tops[1]] * (tops[2] || 1);
+            y = tops[0].toPx(true, this.style.height) + this.globalHeight[tops[1]] * (tops[2] || 1);
           }
         } else {
           y = 0;
@@ -4678,25 +4784,91 @@ function () {
       var angle = view.css && view.css.rotate ? this._getAngle(view.css.rotate) : 0; // 当设置了 right 时，默认 align 用 right，反之用 left
 
       var align = view.css && view.css.align ? view.css.align : view.css && view.css.right ? 'right' : 'left';
+      var verticalAlign = view.css && view.css.verticalAlign ? view.css.verticalAlign : 'top'; // 记录绘制时的画布
+
+      var xa = 0;
 
       switch (align) {
         case 'center':
-          this.ctx.translate(x, y + height / 2);
+          xa = x;
           break;
 
         case 'right':
-          this.ctx.translate(x - width / 2, y + height / 2);
+          xa = x - width / 2;
           break;
 
         default:
-          this.ctx.translate(x + width / 2, y + height / 2);
+          xa = x + width / 2;
           break;
+      }
+
+      var ya = 0;
+
+      switch (verticalAlign) {
+        case 'center':
+          ya = y;
+          break;
+
+        case 'bottom':
+          ya = y - height / 2;
+          break;
+
+        default:
+          ya = y + height / 2;
+          break;
+      }
+
+      this.ctx.translate(xa, ya); // 记录该 view 的有效点击区域
+      // TODO ，旋转和裁剪的判断
+      // 记录在真实画布上的左侧
+
+      var left = x;
+
+      if (align === 'center') {
+        left = x - width / 2;
+      } else if (align === 'right') {
+        left = x - width;
+      }
+
+      var top = y;
+
+      if (verticalAlign === 'center') {
+        top = y - height / 2;
+      } else if (verticalAlign === 'bottom') {
+        top = y - height;
+      }
+
+      if (view.rect) {
+        view.rect.left = left;
+        view.rect.top = top;
+        view.rect.right = left + width;
+        view.rect.bottom = top + height;
+        view.rect.x = view.css && view.css.right ? x - width : x;
+        view.rect.y = y;
+      } else {
+        view.rect = {
+          left: left,
+          top: top,
+          right: left + width,
+          bottom: top + height,
+          x: view.css && view.css.right ? x - width : x,
+          y: y
+        };
+      }
+
+      view.rect.left = view.rect.left - paddings[3];
+      view.rect.top = view.rect.top - paddings[0];
+      view.rect.right = view.rect.right + paddings[1];
+      view.rect.bottom = view.rect.bottom + paddings[2];
+
+      if (view.type === 'text') {
+        view.rect.minWidth = view.css.fontSize.toPx() + paddings[1] + paddings[3];
       }
 
       this.ctx.rotate(angle);
 
       if (!notClip && view.css && view.css.borderRadius && view.type !== 'rect') {
-        this._doClip(view.css.borderRadius, width, height);
+        this._doClip(view.css.borderRadius, width, height, view.css.borderStyle);
       }
 
       this._doShadow(view);
@@ -4713,20 +4885,13 @@ function () {
         y: y,
         extra: extra
       };
-    } // 画文字的背景图片
-
+    }
   }, {
-    key: "_doBackground",
-    value: function _doBackground(view) {
-      this.ctx.save();
+    key: "_doPaddings",
+    value: function _doPaddings(view) {
+      var _ref2 = view.css ? view.css : {},
+          padding = _ref2.padding;
 
-      var _this$_preProcess = this._preProcess(view, true),
-          rawWidth = _this$_preProcess.width,
-          rawHeight = _this$_preProcess.height;
-
-      var _view$css2 = view.css,
-          background = _view$css2.background,
-          padding = _view$css2.padding;
       var pd = [0, 0, 0, 0];
 
       if (padding) {
@@ -4765,10 +4930,26 @@ function () {
         }
       }
 
+      return pd;
+    } // 画文字的背景图片
+
+  }, {
+    key: "_doBackground",
+    value: function _doBackground(view) {
+      this.ctx.save();
+
+      var _this$_preProcess = this._preProcess(view, true),
+          rawWidth = _this$_preProcess.width,
+          rawHeight = _this$_preProcess.height;
+
+      var background = view.css.background;
+
+      var pd = this._doPaddings(view);
+
       var width = rawWidth + pd[1] + pd[3];
       var height = rawHeight + pd[0] + pd[2];
 
-      this._doClip(view.css.borderRadius, width, height);
+      this._doClip(view.css.borderRadius, width, height, view.css.borderStyle);
 
       if (GD.api.isGradient(background)) {
         GD.api.doGradient(background, width, height, this.ctx);
@@ -4836,6 +5017,10 @@ function () {
         this.ctx.drawImage(view.url, -(width / 2), -(height / 2), width, height);
       } else {
         this.ctx.drawImage(view.url, startX, startY, rWidth, rHeight, -(width / 2), -(height / 2), width, height);
+        view.rect.startX = startX / view.sWidth;
+        view.rect.startY = startY / view.sHeight;
+        view.rect.endX = (startX + rWidth) / view.sWidth;
+        view.rect.endY = (startY + rHeight) / view.sHeight;
       }
 
       this.ctx.restore();
@@ -4865,22 +5050,26 @@ function () {
       var lines = extra.lines,
           lineHeight = extra.lineHeight,
           textArray = extra.textArray,
-          linesArray = extra.linesArray; // 如果设置了id，则保留 text 的长度
+          linesArray = extra.linesArray,
+          textIndent = extra.textIndent; // 如果设置了id，则保留 text 的长度
 
       if (view.id) {
         var textWidth = 0;
 
         for (var i = 0; i < textArray.length; ++i) {
-          textWidth = this.ctx.measureText(textArray[i]).width > textWidth ? this.ctx.measureText(textArray[i]).width : textWidth;
+          var _w = this.ctx.measureText(textArray[i]).width;
+          textWidth = _w > textWidth ? _w : textWidth;
         }
 
         this.globalWidth[view.id] = width ? textWidth < width ? textWidth : width : textWidth;
       }
 
       var lineIndex = 0;
+      var tabWidth = 0;
 
       for (var j = 0; j < textArray.length; ++j) {
-        var preLineLength = Math.round(textArray[j].length / linesArray[j]);
+        var preLineLength = Math.ceil(textArray[j].length / linesArray[j]);
+        var firstLineLength = Math.ceil((width - textIndent) / width * (textArray[j].length / linesArray[j]));
         var start = 0;
         var alreadyCount = 0;
 
@@ -4890,12 +5079,13 @@ function () {
             break;
           }
 
-          alreadyCount = preLineLength;
+          tabWidth = _i2 == 0 ? textIndent : 0;
+          alreadyCount = _i2 == 0 ? firstLineLength : preLineLength;
           var text = textArray[j].substr(start, alreadyCount);
           var measuredWith = this.ctx.measureText(text).width; // 如果测量大小小于width一个字符的大小，则进行补齐，如果测量大小超出 width，则进行减除
           // 如果已经到文本末尾，也不要进行该循环
 
-          while (start + alreadyCount <= textArray[j].length && (width - measuredWith > view.css.fontSize.toPx() || measuredWith > width)) {
+          while (start + alreadyCount <= textArray[j].length && (width - measuredWith - tabWidth > view.css.fontSize.toPx() || measuredWith - width > view.css.fontSize.toPx())) {
             if (measuredWith < width) {
               text = textArray[j].substr(start, ++alreadyCount);
             } else {
@@ -4904,7 +5094,7 @@ function () {
                 break;
               }
 
-              text = textArray[j].substr(start, --alreadyCount);
+              text = textArray[j].substr(start, --alreadyCount); // break
             }
 
             measuredWith = this.ctx.measureText(text).width;
@@ -4928,18 +5118,22 @@ function () {
 
           this.ctx.textAlign = view.css.textAlign ? view.css.textAlign : 'left';
           var x = void 0;
+          var lineX = void 0;
 
           switch (view.css.textAlign) {
             case 'center':
               x = 0;
+              lineX = x - measuredWith / 2 + tabWidth;
               break;
 
             case 'right':
               x = width / 2;
+              lineX = x - measuredWith + tabWidth;
               break;
 
             default:
-              x = -(width / 2);
+              x = -(width / 2) + tabWidth;
+              lineX = x;
               break;
           }
 
@@ -4955,21 +5149,22 @@ function () {
           var fontSize = view.css.fontSize.toPx();
 
           if (view.css.textDecoration) {
+            this.ctx.lineWidth = fontSize / 13;
             this.ctx.beginPath();
 
             if (/\bunderline\b/.test(view.css.textDecoration)) {
-              this.ctx.moveTo(x, y);
-              this.ctx.lineTo(x + measuredWith, y);
+              this.ctx.moveTo(lineX, y);
+              this.ctx.lineTo(lineX + measuredWith, y);
             }
 
             if (/\boverline\b/.test(view.css.textDecoration)) {
-              this.ctx.moveTo(x, y - fontSize);
-              this.ctx.lineTo(x + measuredWith, y - fontSize);
+              this.ctx.moveTo(lineX, y - fontSize);
+              this.ctx.lineTo(lineX + measuredWith, y - fontSize);
             }
 
             if (/\bline-through\b/.test(view.css.textDecoration)) {
-              this.ctx.moveTo(x, y - fontSize / 3);
-              this.ctx.lineTo(x + measuredWith, y - fontSize / 3);
+              this.ctx.moveTo(lineX, y - fontSize / 3);
+              this.ctx.lineTo(lineX + measuredWith, y - fontSize / 3);
             }
 
             this.ctx.closePath();
@@ -4998,21 +5193,19 @@ function () {
         this.ctx.fillStyle = view.css.color;
       }
 
-      var borderRadius = view.css.borderRadius;
-      var r = borderRadius ? Math.min(borderRadius.toPx(), width / 2, height / 2) : 0;
-      this.ctx.beginPath();
-      this.ctx.arc(-width / 2 + r, -height / 2 + r, r, 1 * Math.PI, 1.5 * Math.PI); //左上角圆弧
+      var _view$css2 = view.css,
+          borderRadius = _view$css2.borderRadius,
+          borderStyle = _view$css2.borderStyle,
+          borderWidth = _view$css2.borderWidth;
 
-      this.ctx.lineTo(width / 2 - r, -height / 2);
-      this.ctx.arc(width / 2 - r, -height / 2 + r, r, 1.5 * Math.PI, 2 * Math.PI); // 右上角圆弧
+      this._border({
+        borderRadius: borderRadius,
+        width: width,
+        height: height,
+        borderWidth: borderWidth,
+        borderStyle: borderStyle
+      });
 
-      this.ctx.lineTo(width / 2, height / 2 - r);
-      this.ctx.arc(width / 2 - r, height / 2 - r, r, 0, 0.5 * Math.PI); // 右下角圆弧
-
-      this.ctx.lineTo(-width / 2 + r, height / 2);
-      this.ctx.arc(-width / 2 + r, height / 2 - r, r, 0.5 * Math.PI, 1 * Math.PI); // 左下角圆弧
-
-      this.ctx.closePath();
       this.ctx.fill();
       this.ctx.restore();
 
@@ -5027,7 +5220,7 @@ function () {
         return;
       }
 
-      var box = view.css.shadow.replace(/,\s+/g, ',').split(' ');
+      var box = view.css.shadow.replace(/,\s+/g, ',').split(/\s+/);
 
       if (box.length > 4) {
         console.error("shadow don't spread option");
@@ -5049,9 +5242,6 @@ function () {
   return Painter;
 }();
 
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.iterator.js
-var es6_array_iterator = __webpack_require__("cadf");
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.object.keys.js
 var es6_object_keys = __webpack_require__("456d");
@@ -5090,7 +5280,6 @@ function typeof_typeof(obj) {
   return typeof_typeof(obj);
 }
 // CONCATENATED MODULE: ./src/lib/util.js
-
 
 
 
@@ -5408,30 +5597,37 @@ function setStringPrototype(scale) {
    * 是否支持负数
    * @param {Boolean} minus 是否支持负数
    */
-  String.prototype.toPx = function toPx(minus) {
-    var reg;
-
-    if (minus) {
-      reg = /^-?[0-9]+([.]{1}[0-9]+){0,1}(px)$/g;
-    } else {
-      reg = /^[0-9]+([.]{1}[0-9]+){0,1}(px)$/g;
-    }
-
-    var results = reg.exec(this);
-
-    if (!this || !results) {
-      console.error("The size: ".concat(this, " is illegal"));
+  String.prototype.toPx = function toPx(minus, baseSize) {
+    if (this === '0') {
       return 0;
     }
 
+    var reg;
+
+    if (minus) {
+      reg = /^-?[0-9]+([.]{1}[0-9]+){0,1}(px|%)$/g;
+    } else {
+      reg = /^[0-9]+([.]{1}[0-9]+){0,1}(px|%)$/g;
+    }
+
+    var results = reg.exec(this);
+    var unit = results[2];
     var value = parseFloat(this);
-    return Math.round(value * (scale || 1));
+    var res = 0;
+
+    if (unit === 'px') {
+      res = Math.round(value * (scale || 1));
+    } else if (unit === '%') {
+      res = Math.round(value * baseSize / 100);
+    }
+
+    return res;
   };
 }
 // CONCATENATED MODULE: ./src/lib/canvas-poster.vue?vue&type=script&lang=js&
  /* harmony default export */ var lib_canvas_postervue_type_script_lang_js_ = (canvas_postervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/lib/canvas-poster.vue?vue&type=style&index=0&id=234b47c6&scoped=true&lang=css&
-var canvas_postervue_type_style_index_0_id_234b47c6_scoped_true_lang_css_ = __webpack_require__("a8fb");
+// EXTERNAL MODULE: ./src/lib/canvas-poster.vue?vue&type=style&index=0&id=32b53ae9&scoped=true&lang=css&
+var canvas_postervue_type_style_index_0_id_32b53ae9_scoped_true_lang_css_ = __webpack_require__("7803");
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
@@ -5543,7 +5739,7 @@ var component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "234b47c6",
+  "32b53ae9",
   null
   
 )
@@ -5572,52 +5768,6 @@ module.exports = function (TO_STRING) {
       : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
   };
 };
-
-
-/***/ }),
-
-/***/ "7333":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// 19.1.2.1 Object.assign(target, source, ...)
-var DESCRIPTORS = __webpack_require__("9e1e");
-var getKeys = __webpack_require__("0d58");
-var gOPS = __webpack_require__("2621");
-var pIE = __webpack_require__("52a7");
-var toObject = __webpack_require__("4bf8");
-var IObject = __webpack_require__("626a");
-var $assign = Object.assign;
-
-// should work with symbols and should have deterministic property order (V8 bug)
-module.exports = !$assign || __webpack_require__("79e5")(function () {
-  var A = {};
-  var B = {};
-  // eslint-disable-next-line no-undef
-  var S = Symbol();
-  var K = 'abcdefghijklmnopqrst';
-  A[S] = 7;
-  K.split('').forEach(function (k) { B[k] = k; });
-  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
-}) ? function assign(target, source) { // eslint-disable-line no-unused-vars
-  var T = toObject(target);
-  var aLen = arguments.length;
-  var index = 1;
-  var getSymbols = gOPS.f;
-  var isEnum = pIE.f;
-  while (aLen > index) {
-    var S = IObject(arguments[index++]);
-    var keys = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S);
-    var length = keys.length;
-    var j = 0;
-    var key;
-    while (length > j) {
-      key = keys[j++];
-      if (!DESCRIPTORS || isEnum.call(S, key)) T[key] = S[key];
-    }
-  } return T;
-} : $assign;
 
 
 /***/ }),
@@ -5661,6 +5811,17 @@ module.exports = function (index, length) {
   return index < 0 ? max(index + length, 0) : min(index, length);
 };
 
+
+/***/ }),
+
+/***/ "7803":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_32b53ae9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("17b2");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_32b53ae9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_32b53ae9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_32b53ae9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -6358,21 +6519,6 @@ module.exports = function (exec) {
 
 /***/ }),
 
-/***/ "9cb7":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("2c33");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("6cbeca5a", content, true, {"sourceMap":false,"shadowMode":false});
-
-/***/ }),
-
 /***/ "9def":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6612,17 +6758,6 @@ module.exports.f = function (C) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("f410");
-
-/***/ }),
-
-/***/ "a8fb":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_234b47c6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("9cb7");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_234b47c6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_234b47c6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_canvas_poster_vue_vue_type_style_index_0_id_234b47c6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -7536,6 +7671,21 @@ module.exports = __webpack_require__("584a").Array.isArray;
 
 /***/ }),
 
+/***/ "f504":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("2350")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".canvas[data-v-32b53ae9]{position:fixed;top:2000px}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "f559":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7613,17 +7763,6 @@ module.exports = function (it, Constructor, name, forbiddenField) {
     });
   }
 })(document);
-
-
-/***/ }),
-
-/***/ "f751":
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.3.1 Object.assign(target, source)
-var $export = __webpack_require__("5ca1");
-
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__("7333") });
 
 
 /***/ }),
