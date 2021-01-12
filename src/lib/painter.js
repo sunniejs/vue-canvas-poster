@@ -32,17 +32,17 @@ export default class Painter {
       // 如果未设置背景，则默认使用透明色
       this.ctx.fillStyle = 'transparent'
       this.ctx.fillRect(-(width / 2), -(height / 2), width, height)
-    } else if (bg.startsWith('#') || bg.startsWith('rgba') || bg.toLowerCase() === 'transparent') {
+    } else if (bg.src) {
+      // 背景填充图片
+      this.ctx.drawImage(bg, -(width / 2), -(height / 2), width, height)
+    }else if (bg.startsWith('#') || bg.startsWith('rgba') || bg.toLowerCase() === 'transparent') {
       // 背景填充颜色
       this.ctx.fillStyle = bg
       this.ctx.fillRect(-(width / 2), -(height / 2), width, height)
     } else if (GD.api.isGradient(bg)) {
       GD.api.doGradient(bg, width, height, this.ctx)
       this.ctx.fillRect(-(width / 2), -(height / 2), width, height)
-    } else {
-      // 背景填充图片
-      this.ctx.drawImage(bg, -(width / 2), -(height / 2), width, height)
-    }
+    }  
     this.ctx.restore()
   }
 
