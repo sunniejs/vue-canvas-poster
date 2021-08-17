@@ -1,3 +1,6 @@
+import assets1 from './assets/1.jpg'
+import assetsAvatar from './assets/avatar.png'
+
 // 海报图
 export function drawPoster(data) {
   return new Promise(function(resolve) {
@@ -61,7 +64,7 @@ function poster() {
       },
       {
         type: 'image',
-        url: require('./assets/1.jpg'),
+        url: assets1,
         css: {
           top: '150px',
           left: '25px',
@@ -104,7 +107,7 @@ function poster() {
       },
       {
         type: 'text',
-        text: '18987、安奈儿童装上衣条纹童装上衣条纹童装上衣 条纹童装上衣',
+        text: '18987、安奈儿童装上衣条纹童装上衣条纹童装上衣条纹童装上衣 条纹童装上衣 条纹童装上衣',
         css: {
           top: '507px',
           left: '25px',
@@ -206,7 +209,7 @@ function drawImgPoster() {
     views: [
       {
         type: 'image',
-        url: require('./assets/avatar.png')
+        url: assetsAvatar
       },
       {
         type: 'text',
@@ -219,7 +222,7 @@ function drawImgPoster() {
       },
       {
         type: 'image',
-        url: require('./assets/avatar.png'),
+        url: assetsAvatar,
         css: {
           width: '200px',
           height: 'auto',
@@ -237,7 +240,7 @@ function drawImgPoster() {
       },
       {
         type: 'image',
-        url: require('./assets/avatar.png'),
+        url: assetsAvatar,
         css: {
           width: '200px',
           height: '200px',
@@ -255,7 +258,7 @@ function drawImgPoster() {
       },
       {
         type: 'image',
-        url: require('./assets/avatar.png'),
+        url: assetsAvatar,
         css: {
           width: '200px',
           height: '200px',

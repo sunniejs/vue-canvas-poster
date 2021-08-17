@@ -4,7 +4,18 @@
   "description": "A lightweight vue components use canvas draw image by css properties.(一个通过css属性画canvas图片的轻量级的vue组件)",
   "author": "Sunnie <sunniejs@163.com>",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "main": "./dist/vue-canvas-poster.umd.js",
+  "module": "./dist/vue-canvas-poster.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-canvas-poster.es.js",
+      "require": "./dist/vue-canvas-poster.umd.js"
+    },
+    "./style": "./dist/style.css"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/sunniejs/vue-canvas-poster"
@@ -21,44 +32,23 @@
   ],
   "private": false,
   "scripts": {
-    "dev": "npm run serve",
-    "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name vue-canvas-poster ./src/lib/index.js"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.9.0",
-    "@vue/cli-plugin-eslint": "^3.9.0",
-    "@vue/cli-service": "^3.9.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "@types/node": "^16.6.1",
+    "@vitejs/plugin-vue": "^1.3.0",
+    "@vue/compiler-sfc": "^3.0.5",
+    "autoprefixer": "^10.3.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^7.16.0",
+    "vite": "^2.4.4",
+    "vue": "^3.0.5"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {
-      "no-console": "off",
-      "semi": [
-        2,
-        "never"
-      ]
-    },
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
+  "peerDependencies": {
+    "vue": ">=3.0.5"
   },
   "postcss": {
     "plugins": {

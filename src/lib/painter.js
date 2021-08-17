@@ -1,5 +1,5 @@
-const QR = require('./qrcode.js')
-const GD = require('./gradient.js')
+import * as QR from './qrcode.js'
+import * as GD from './gradient.js'
 
 export default class Painter {
   constructor(ctx, data) {

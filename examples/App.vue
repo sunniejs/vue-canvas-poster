@@ -1,13 +1,23 @@
 <template>
   <div id="app">
-    <img :src="src" alt="" class="share-image">
-    <vue-canvas-poster class="poster" :widthPixels="1000" :painting="painting" @success="success" @fail="fail"></vue-canvas-poster>
+    <img
+      :src="src"
+      alt=""
+      class="share-image"
+    >
+    <vue-canvas-poster
+      :width-pixels="1000"
+      :painting="painting"
+      @success="success"
+      @fail="fail"
+    />
   </div>
 </template>
 <script>
+  
 import { drawPoster } from './painter';
 export default {
-  name: 'app',
+  name: 'App',
   components: {
   },
   data() {
@@ -27,6 +37,7 @@ export default {
   methods: {
     // 保存
     success(src) {
+      alert('生成成功')
       this.src = src
     },
     fail(err) {

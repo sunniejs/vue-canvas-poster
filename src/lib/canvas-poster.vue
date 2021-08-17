@@ -1,7 +1,8 @@
 <script>
+import { defineComponent, h } from 'vue'
 import Painter from './painter'
 import { equal } from './util'
-export default {
+export default defineComponent({
   name: 'VueCanvasPoster',
   props: {
     painting: {
@@ -19,18 +20,6 @@ export default {
       default: 750
     }
   },
-  watch: {
-    painting: {
-      handler(newVal, oldVal) {
-        if (this.isNeedRefresh(newVal, oldVal)) {
-          this.paintCount = 0
-          this.startPaint()
-        }
-      },
-      deep: true,
-      immediate: true
-    }
-  },
   data() {
     return {
       paintCount: 0,
@@ -43,20 +32,19 @@ export default {
       ctx: null
     }
   },
-  render(h) {
-    return h('div', [
-      h('canvas', {
-        ref: 'canvas',
-        class: 'canvas',
-        style: this.painterStyle
-      })
-    ])
-  },
-  mounted() {
-    this.$nextTick(() => {
-      this.canvas = this.$refs.canvas // 指定canvas
-      this.ctx = this.canvas.getContext('2d') //设置2D渲染区域
-    })
+  watch: {
+    painting: {
+      handler(newVal, oldVal) {
+        if (this.isNeedRefresh(newVal, oldVal)) {
+          this.paintCount = 0
+          this.$nextTick(() => {
+            this.startPaint()
+          })
+        }
+      },
+      deep: true,
+      immediate: true
+    }
   },
   methods: {
     /**
@@ -97,7 +85,7 @@ export default {
           }
           this.canvasHeightInPx = height.toPx()
           this.painterStyle = `width:${this.canvasWidthInPx}px;height:${this.canvasHeightInPx}px;`
-          this.canvas = this.$refs.canvas // 指定canvas
+          this.canvas = this.$refs.canvasRef // 指定canvas
           this.canvas.width = this.canvasWidthInPx
           this.canvas.height = this.canvasHeightInPx
           const ctx = this.canvas.getContext('2d') //设置2D渲染区域
@@ -179,8 +167,17 @@ export default {
         }
       })
     }
+  },
+  render() {
+    return h('div', [
+      h('canvas', {
+        ref: 'canvasRef',
+        class: 'canvas',
+        style: this.painterStyle
+      })
+    ])
   }
-}
+})
 function setStringPrototype(scale) {
   /* eslint-disable no-extend-native */
   /**
@@ -213,6 +210,6 @@ function setStringPrototype(scale) {
 <style scoped>
 .canvas {
   position: fixed;
-  top: 2000px;
+  left: 1000%;
 }
 </style>

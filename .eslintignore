@@ -1,0 +1,7 @@
+build/*.js
+
+public
+dist
+upload_oss.js
+vue.config.js
+type.d.ts

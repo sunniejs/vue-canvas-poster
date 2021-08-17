@@ -1,7 +1,7 @@
-import VueCanvasPoster from './canvas-poster'
+import VueCanvasPoster from './canvas-poster.vue'
 
-export function install(Vue) {
-  Vue.component('vue-canvas-poster', VueCanvasPoster)
+export function install(app) {
+  app.component('VueCanvasPoster', VueCanvasPoster)
 }
 export { VueCanvasPoster }
 const myPlugin = {
