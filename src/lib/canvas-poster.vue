@@ -1,4 +1,5 @@
 <script>
+import { h } from 'vue'
 import Painter from './painter'
 import { equal } from './util'
 export default {
