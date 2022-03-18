@@ -577,6 +577,14 @@ export default class Painter {
         } else {
           this.ctx.fillText(text, x, y, measuredWith)
         }
+        // 新增textStroke属性 文字周围白色阴影
+        if (view.css.textStyle === 'textStroke') {
+          this.ctx.lineWidth = 15;
+          this.ctx.strokeStyle = "#FFFFFF";
+          this.ctx.strokeText(text, x, y,measuredWith);
+          this.ctx.fillStyle = "#1D338C";
+          this.ctx.fillText(text, x, y,measuredWith);
+      }
         const fontSize = view.css.fontSize.toPx()
         if (view.css.textDecoration) {
           this.ctx.lineWidth = fontSize / 13
@@ -593,6 +601,12 @@ export default class Painter {
             this.ctx.moveTo(lineX, y - fontSize / 3)
             this.ctx.lineTo(lineX + measuredWith, y - fontSize / 3)
           }
+          // 内容下划线下边距离属性 防止内容下划线贴到字的最底下
+          if (/\bunderlineBottom\b/.test(view.css.textDecoration)) {
+            this.ctx.lineWidth = 3
+            this.ctx.moveTo(x, y + 12)
+            this.ctx.lineTo(x + measuredWith, y + 12)
+        }
           this.ctx.closePath()
           this.ctx.strokeStyle = view.css.color
           this.ctx.stroke()
